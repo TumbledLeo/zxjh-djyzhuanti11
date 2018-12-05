@@ -1,17 +1,1038 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>国家大剧院</title>
-    <link rel="shortcut icon" type="image/x-icon" href="">
-    <!-- 样式文件 -->
-    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="lib/swiper.min.3.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/index2.css">
-</head>
-<body>
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="lib/swiper.min.3.js"></script>
+    <script src="lib/iscroll.js"></script>
+    <script src="js/index.js"></script> 
+    <script type="text/javascript">
+
+        var myScroll;
+        function loaded() {
+            myScroll = new IScroll('#wrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false ,scrollbars: 'custom'});
+        }
+    </script>
+  </head>
+  <body onload="loaded()">
+    <div class="logo_left show">
+          <a href="#">
+            <img src="images/go.png" alt="">
+          </a>
+    </div>
+    <div class="top_logo" style="width:128px;position: absolute;left:50%;margin-left:-64px;z-index:999;">
+        <div class="logo" style="">
+            <img style="z-index:999;width:100%" src="images/logo.png" alt="">
+        </div>
+    </div> 
+    <header class="hide">      
+      <ul class="cf  zong">
+        <li class="ss">
+          <a  class="play" href="">首页</a>
+          <!-- <div class="menu" style="  background:red;"> -->
+          </div>
+        </li>
+        <li class="ss">
+          <a class="play" href="">演出购票</a>
+          <div class="menu" style=" width:100%;text-align: center"> 
+            <ul class="yanc cf">
+                <li class="two">
+                    <h2>日历</h2>
+                    <div class="con">
+                        <a href=""class="rl1">演出日历</a>
+                        <a href=""class="rl2">2018夏季演出季</a>
+                    </div>
+                </li>
+                <li class="fiv">
+                    <h2>艺术门类</h2>
+                    <ol class="con">
+                        <li><a href=""><img src="images/ml1.png" alt=""><p>歌剧</p></a></li>
+                        <li><a href=""><img src="images/ml2.png" alt=""><p>音乐</p></a></li>
+                        <li><a href=""><img src="images/ml3.png" alt=""><p>舞剧</p></a></li>
+                        <li><a href=""><img src="images/ml4.png" alt=""><p>戏剧</p></a></li>
+                        <li><a href=""><img src="images/ml5.png" alt=""><p>戏曲</p></a></li>
+                    </ol>
+                </li>
+                <li class="thr">
+                    <h2>购票信息</h2>
+                    <div class="buy">
+                        <img class="bg"src="images/gp_bg.jpg" alt="">
+                        <p class="pon">8610 - 66550000 </p>
+                        <p class="pon2"><a href=""><img src="images/pon1.png" alt=""></a><a href=""><img src="images/pon2.png" alt=""></a>官网购票优先便捷</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="yanc cf show">
+                <li><a href=""><img src="images/ycgp1.jpg" alt=""><p>2018舞蹈节</p></a></li>
+                <li><a href=""><img src="images/ycgp2.jpg" alt=""><p>醇·萃古典</p></a></li>
+                <li><a href=""><img src="images/ycgp3.jpg" alt=""><p>2018国际钢琴系列</p></a></li>
+            </ul>
+          </div>      
+        </li>
+        <li class="ss">
+          <a class="play" href="">参观游览</a>
+              <div class="menu cang" style=""> 
+                <div class="cg yanc cf">
+                        <div class="left">
+                            <h2>探索剧院</h2>
+                            <div class="man">
+                                <ul class="cf">
+                                    <li><a href="">
+                                            <img src="images/tsjy.jpg" alt="">
+                                            <div class="com">
+                                                    <h4>德彪西逝世100周年纪念展</h4>
+                                                    <p>2018/09/21-2018/11/10</p>
+                                                    <p>艺术资料中心环廊</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="icon">
+                                            <a href=""><img src="images/tit2_2.png" alt=""><p>剧院景观</p></a>
+                                            <a href=""><img src="images/tit2_1.png" alt=""><p>剧院景观</p></a>
+                                    </li>
+                                    <li class="icon">
+                                            <a href=""><img src="images/tit2_5.png" alt=""><p>剧院景观</p></a>
+                                            <a href=""><img src="images/tit2_4.png" alt=""><p>剧院景观</p></a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                         <div class="right">
+                                <h2>购物&餐饮</h2>
+                                <a href="" class="s1"><p>艺术精品长廊</p></a>
+                                <a href=""class="s2"><p>咖啡厅</p></a>
+                                <a href=""class="s3"><p>西餐厅</p></a>
+                                <a href=""class="cy"><img src="images/cy.jpg" alt=""></a>
+                                <a href="" class="dc">立即订餐</a>
+                         </div>
+                </div> 
+                <div class="gp">
+                        <img src="images/cgyl_bg.jpg" alt="">
+                        <div class="time">
+                            <p><strong>9:00-17:00</strong><span>(周一闭馆)</span><strong>30</strong> ¥/张</p>
+                            <p class="des">周二至周日及法定节假日 16:30停止售票、检票及观众入场</p>
+                        </div>
+                        <div class="gp_a">
+                            <a href="#">立即购票</a>
+                            <a href="">本周场馆开放情况</a>
+                        </div>
+                </div> 
+          </div>
+        </li>
+        <li class="ss">
+          <a class="play" href="">艺术活动</a>
+          <div class="menu">
+                <ul class="yanc cf yshd">
+                    <li>
+                        <h2>周末音乐会　</h2>
+                        <a href="#" class="jia"><img src="images/jia.png" alt=""></a>
+                        <div class="pic">
+                                <!--img: left:-50%; -->
+                            <img src="images/yshd1.jpg" alt="">
+                            <h4>音乐中的游戏和故事——孩子们的童话音乐梦想</h4>
+                            <p class="time">2018/10/28 10:30   音乐厅</p>
+                            <p class="des">指挥： 阿迪安·施耐德</p>
+                        </div>
+                    </li>
+                    <li>
+                            <h2>经典艺术讲堂</h2>
+                            <a href="#" class="jia"><img src="images/jia.png" alt=""></a>
+                            <div class="pic">
+                                <img src="images/yshd2.jpg" alt="">
+                                <h4>中国钢琴音乐作品的创作</h4>
+                                <p class="time">2018/10/27 10:30  新闻发布厅</p>
+                                <p class="des">主讲人： 高为杰 , 高平</p>
+                            </div>
+                        </li>
+                     <li>
+                        <h2>走进唱片里的世界</h2>
+                            <a href="#" class="jia"><img src="images/jia.png" alt=""></a>
+                            <div class="pic">
+                                <img src="images/yshd3.jpg" alt="">
+                                <h4>天地的回声音乐沙龙</h4>
+                                <p class="time">2018/10/2814:30艺术资料中心</p>
+                                <p class="des">主讲人： 焦淼</p>
+                            </div>
+                            </li>
+                    <li>
+                        <h2>普及活动</h2>
+                        <a href="#" class="jia"><img src="images/jia.png" alt=""></a>
+                        <div class="pic">
+                            <img src="images/yshd4.jpg" alt="">
+                            <h4>德彪西逝世100周年纪念展</h4>
+                            <p class="time">2018/09/21-2018/11/10</p>
+                            <p class="des">展览地点：艺术资料中心环廊</p>
+                        </div>
+                    </li>
+                </ul>
+          </div>
+        </li>  
+        <li class="ss">
+          <a  class="play " href="" >资讯动态</a>
+          <div class="menu">
+                <ul class="yanc cf yshd zxdt">
+                    <li class="four">
+                        <h2>热点聚焦　</h2>
+                        <a href="#" class="jia"><img src="images/jia.png" alt=""></a>
+                        <ul>
+                            <li class="cf">
+                                <div class="left">
+                                    <img src="images/zxdt1.jpg" alt="">
+                                </div>
+                                <div class="right1">
+                                    <h3>还记得这艘“羊头战舰”吗？</h3>
+                                    <p>2018/08/29</p>
+                                </div>
+                            </li>
+                            <li class="cf">
+                                    <div class="left">
+                                        <img src="images/zxdt3.jpg" alt="">
+                                    </div>
+                                    <div class="right1">
+                                        <h3>强强联合~著名指挥家闫慧昌执棒中央民族乐团</h3>
+                                        <p>2018/08/29</p>
+                                    </div>
+                                </li>
+                                <li class="cf">
+                                        <div class="left">
+                                            <img src="images/zxdt5.jpg" alt="">
+                                        </div>
+                                        <div class="right1">
+                                            <h3>卡普松：成为“男神”绝不只是因为“颜值”</h3>
+                                            <p>2018/08/29</p>
+                                        </div>
+                                    </li>
+                        </ul>
+                    </li>
+                    <li class="four">
+                            <h2>剧院新闻</h2>
+                            <a href="#" class="jia"><img src="images/jia.png" alt=""></a> 
+                            <ul>
+                                    <li class="cf">
+                                        <div class="left">
+                                            <img src="images/zxdt2.jpg" alt="">
+                                        </div>
+                                        <div class="right1">
+                                            <h3>市委书记蔡奇、市长陈吉宁到 国家大剧院调研</h3>
+                                            <p>2018/08/29</p>
+                                        </div>
+                                    </li>
+                                    <li class="cf">
+                                            <div class="left">
+                                                <img src="images/zxdt4.jpg" alt="">
+                                            </div>
+                                            <div class="right1">
+                                                <h3>王宁院长会见斯卡拉歌剧院总经理兼艺术总监</h3>
+                                                <p>2018/08/29</p>
+                                            </div>
+                                        </li>
+                                        <li class="cf">
+                                                <div class="left">
+                                                    <img src="images/zxdt6.jpg" alt="">
+                                                </div>
+                                                <div class="right1">
+                                                    <h3>纪念罗西尼逝世150周年音乐会精彩上演</h3>
+                                                    <p>2018/08/29</p>
+                                                </div>
+                                            </li>
+                                </ul>    
+                    </li>
+                    <li class="two">
+                        <h2>艺术交流　</h2>
+                        <a href="#" class="jia"><img src="images/jia.png" alt=""></a>
+                        <ul>
+                            <li><a href="" class="ysjl1"><p>艺术交流活动</p></a></li>
+                            <li><a href="" class="ysjl2"><p>歌剧发展论坛</p></a></li>
+                            <li><a href="" class="ysjl3"><p>世界音乐博览</p></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ol class="yanc cf zz">
+                    <li><a href="">
+                            <img src="images/wx1.jpg" alt="">
+                            <img class="wx" src="images/wxf.png" alt="">
+                            <p>国家大剧院</p>
+                    </a>
+                    </li>
+                    <li><a href="">
+                            <img src="images/wx2.jpg" alt="">
+                            <img class="wx"src="images/wxf.png" alt="">
+                            <p>古典音乐频道</p>
+                    </a>
+                    </li>
+                    <li><a href="">
+                            <img src="images/wx3.jpg" alt="">
+                            <img class="wx"src="images/wxf.png" alt="">
+                            <p>国家大剧院票务管家</p>
+                    </a>
+                    </li>
+                    <li><a href="">
+                            <img src="images/wx4.jpg" alt="">
+                            <img class="wx"src="images/wxf.png" alt="">
+                            <p>国家大剧院会员中心</p>
+                    </a>
+                    </li>
+                    <li><a href="">
+                            <img src="images/wx5.jpg" alt="">
+                            <img class="wx"src="images/wxf.png" alt="">
+                            <p>国家大剧院管弦乐团</p>
+                    </a>
+                    </li>
+                    <li><a href="">
+                            <img src="images/wx6.jpg" alt="">
+                            <img class="wx"src="images/wxf.png" alt="">
+                            <p>NCPA走进唱片里的世界</p>
+                    </a>
+                    </li>
+                </ol>
+          </div>
+          <li class="lg" >
+            <div class="logo" style="display:none;z-index:1000">
+            </div>
+          </li>
+        </li>
+        <li class="ss">
+          <a class="play sp_logo" href="">古典音乐频道</a>
+          <div class="menu">
+                <div class="yanc cf gdyy">
+                    <h2>古典音乐频道</h2>
+                    <ul class="cf left">
+                        <li><a href="">
+                            <img src="images/gdyy1.jpg" alt="">
+                            <p>直播<span>LIVE</span></p>
+                        </a>
+                        </li>
+                        <li><a href="">
+                                <img src="images/gdyy2.jpg" alt="">
+                                <p>NCPA音乐厅</p></a>
+                            </li>
+                        <li><a href="">
+                            <img src="images/gdyy3.jpg" alt="">
+                            <p>音乐商店</p></a>
+                        </li>
+                        <li><a href="">
+                            <img src="images/gdyy4.jpg" alt="">
+                            <p>排练现场</p></a>
+                        </li>
+                    </ul>
+                    <ol class="cf">
+                        <li><a href="">
+                            <img src="images/gdyy_1.png" alt="">
+                            <p>古典音乐赏析</p></a>
+                        </li>
+                        <li><a href="">
+                                <img src="images/gdyy_2.png" alt="">
+                                <p>音乐虫聊天室</p></a>
+                            </li>
+                        <li><a href="">
+                             <img src="images/gdyy_3.png" alt="">
+                            <p>NCPA纪录</p></a>
+                        </li>
+                        <li><a href="">
+                            <img src="images/gdyy_4.png" alt="">
+                            <p>音乐资讯</p></a>
+                        </li>
+                    </ol>
+                </div>
+          </div>
+        </li>
+        <li class="ss">
+          <a class="play" href="">会员俱乐部</a>
+          <div class="menu" >
+                <ul class="yanc cf huiy">
+                        <li  class="h1">
+                            <h2>精彩活动</h2>
+                            <a href="#" class="jia" style=""><img src="images/jia.png" alt=""></a>
+                            <ol class="cf r1">
+                                <li><a href="">
+                                    <img src="images/huiy1.jpg" alt="">
+                                    <h5>【开票】大师见面会：作曲家何占豪</h5>
+                                    <p>2018/08/28   10:30 <span>新闻发布厅</span></p>
+                                </a>
+                                </li>
+                                <li><a href="">
+                                        <img src="images/huiy2.jpg" alt="">
+                                        <h5>【开票】大师见面会：歌唱家胡松华</h5>
+                                        <p>2018/08/28   10:30 <span>新闻发布厅</span></p>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li class="h2">
+                                <h2>会员商城</h2>
+                                <a href="#" class="jia"><img src="images/jia.png" alt=""></a>
+                                <a href=""><img class="imgd" src="images/huiy3.jpg" alt=""></a>
+                                <h2>入会指南</h2>
+                                <ol class="l1">
+                                    <li><a href=""><img src="images/hyi_1.png" alt=""><p>如何入会</p></a></li>
+                                    <li><a href=""><img  src="images/hyi_2.png"alt=""><p>会员级别及权益</p></a></li>
+                                    <li><a href=""><img  src="images/hyi_3.png" alt=""><p>积分用途</p></a></li>
+                                    <li><a href=""><img  src="images/hyi_4.png" alt=""><p>了解更多</p></a></li>
+                                </ol>
+                        </li>
+                </ul>
+          </div>
+        </li>
+        <li class="ss">
+          <a class="play" href="">艺术生产</a>
+            <div class="menu" >
+                <ul class="yanc cf huiy yssc"> 
+                        <li  class="h1">
+                            <h2>院藏剧目</h2>
+                            <a href="#" class="jia" style=""><img src="images/jia.png" alt=""></a>
+                            <ol>
+                                <li><a href="">
+                                    <img src="images/yssc1.jpg" alt="">
+                                    <h4>歌剧《梦游女》</h4>
+                                    <p>首演日期：2018/08/28</p>
+                                </a>
+                                </li>
+                                <li><a href="">
+                                    <img src="images/yssc2.jpg" alt="">
+                                    <h4>话剧《暴风雨》</h4>
+                                    <p>首演日期：2018/08/28</p>
+                                </a>
+                                </li>
+                                <li><a href="">
+                                    <img src="images/yssc3.jpg" alt="">
+                                    <h4>歌剧《罗密欧与朱丽叶》</h4>
+                                    <p>首演日期：2018/08/28</p>
+                                </a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li class="h2">
+                                <h2>驻院团体</h2>
+                                <ol class="cf">
+                                    <li><a href=""><img src="images/yssc4.jpg" alt=""><p>国家大剧院管弦乐团</p></a></li>
+                                    <li><a href=""><img src="images/yssc5.jpg" alt=""><p>国家大剧院合唱团</p></a></li>
+                                    <li><a href=""><img src="images/yssc6.jpg" alt=""><p>国家大剧院驻院歌剧演员队</p></a></li>
+                                    <li><a href=""><img src="images/yssc7.jpg" alt=""><p>国家大剧院戏剧演员队</p></a></li>
+
+                                </ol>
+                        </li>
+                </ul> 
+          </div>
+          </div>
+        </li>
+        <li class="ss">
+          <a class="play" href="">关于我们</a>
+          <div class="menu" >
+            <ul class="yanc cf huiy about">
+                    <li  class="h1">  
+                        <ol class="cf ">
+                            <li class="bor">
+                                <h2>剧院文化</h2>
+                               <ul class="cf ">
+                                   <li><a href=""><img src="images/about1.png" alt=""><p>发展宗旨愿景</p></a></li>
+                                   <li><a href=""><img src="images/about2.png" alt=""><p>发展宗旨愿景</p></a></li>
+                                   <li><a href=""><img src="images/about3.png" alt=""><p>发展宗旨愿景</p></a></li>
+                                   <li><a href=""><img src="images/about4.png" alt=""><p>发展宗旨愿景</p></a></li>
+                               </ul>
+                            </li>
+                            <li class="bor content">
+                                    <h2>联系我们</h2>
+                                    <p class="c1">中国·北京市西城区西长安街2号</p>
+                                    <p></p>
+                                    <p class="c2">邮编：100031</p>
+                                    <p>订票热线：8610-6655 0000</p>
+                                    <p class="c4">（9:00-20:00）</p>
+                                    <p >团购热线：8610-6655 0105/0106/0555</p>
+                                    <p class="c6">（周一至周五9:00-18:00）</p>
+                                    <a href="#">了解更多</a>
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="h2">
+                            <h2>赞助与回报</h2>
+                            <ol class="cf">
+                                    <li><a href=""><img src="images/about11.jpg" alt=""><p>合作项目及回报</p></a></li>
+                                    <li><a href=""><img src="images/about22.jpg" alt=""><p>合作伙伴</p></a></li>
+                                    <li><a href=""><img src="images/about33.jpg" alt=""><p class="down">赞助手册下载<img  src="images/down.png" alt=""></p></a></li>
+                                    <li><a href=""><img src="images/about44.jpg" alt=""><p class="email">联系邮箱：<br/>fzb@chncpa.org</p></a></li>
+
+                                </ol>
+                    </li>
+            </ul>
+      </div>
+          </div>
+        </li> 
+      </ul>
+      
+    </header>
+    <div class="img ss" style="position: absolute;">
+        <img src="images/logo1.png" alt="">
+    </div>
+    <!-- banner -->
+    <div class="top banner cf" style="">
+        
+            <div class=" swiper-container swiper-container1">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href=""><img class="bg"src="images/banner1.jpg" alt=""></a>
+                        <div class="slidd">
+                            <ul>
+                                <li><img src="images/banner1_1.jpg" alt="">
+                                    <a href="#"><img src="images/banner_video.png" alt=""></a>
+                                </li>
+                                <li><img src="images/banner1_2.jpg" alt="">
+                                    <a href="#"><img src="images/banner_video.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                            <a href=""><img class="bg" src="images/banner1.jpg" alt=""></a>
+                            <div class="slidd">
+                                    <ul>
+                                        <li><img src="images/banner1_1.jpg" alt="">
+                                            <a href="#"><img src="images/banner_video.png" alt=""></a>
+                                        </li>
+                                        <li><img src="images/banner1_2.jpg" alt="">
+                                            <a href="#"><img src="images/banner_video.png" alt=""></a>
+                                        </li>
+                                    </ul>
+                            </div>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+        
+    </div>
+    <div class="inner ">
+        <div class="goupiao"><a href="">
+                <img src="images/dingpiao.jpg" alt=""></a>
+        </div>
+        
+    </div>
+    <!-- 日历 -->
+    <div class="rili ">
+        <!-- <select>
+                <option value ="volvo">2018年</option>
+                <option value ="saab">2018年</option>
+                <option value="opel">2018年</option>
+                <option value="audi">2018年</option>
+        </select> -->
+        <a href="#" class="gprl"><p>购票日历</p></a>
+            <ul class="select cf">
+                <li>
+                    <div class="select-head">
+                        <span class="select-head-cont"></span>
+                        <span class="select-icon"></span>
+                    </div>
+                    <div class="wraping swiper-container swiper-container4" style="height:290px;position: absolute;background: #fff;">
+                        
+                            <ul class="option swiper-wrapper" style="display:none">                           
+                                <li class="option-item swiper-slide">2010</li>
+                                <li class="option-item swiper-slide">2019</li>
+                                <li class="option-item swiper-slide">2018</li>                           
+                                <li class="option-item swiper-slide">2017</li>
+                                <li class="option-item swiper-slide">2016</li>
+                                <li class="option-item swiper-slide">2015</li>
+                                <li class="option-item swiper-slide">2014</li>
+                                <li class="option-item swiper-slide">2013</li>
+                                <li class="option-item swiper-slide">2012</li>
+                                <li class="option-item swiper-slide">2011</li>
+                            </ul> 
+                            <div class="swiper-button-prev swiper-button-prev1"></div>
+                            <div class="swiper-button-next swiper-button-next1"></div>
+                    </div>              
+                </li>
+            </ul>
+            <ul class="select1 cf" >
+                <li>
+                    <div class="select-head1">
+                        <span class="select-head-cont1"></span>
+                        <span class="select-icon1"></span>
+                    </div>
+                    <div class="wraping1 swiper-container swiper-container5" style="height:290px;position: absolute;background: #fff;">
+                        
+                            <ul class="option1 swiper-wrapper" style="display:none">                           
+                                <li class="option-item1 swiper-slide">十月</li>
+                                <li class="option-item1 swiper-slide">十一月</li>
+                                <li class="option-item1 swiper-slide">十二月</li>                           
+                                <li class="option-item1 swiper-slide">一月</li>
+                                <li class="option-item1 swiper-slide">二月</li>
+                                <li class="option-item1 swiper-slide">三月</li>
+                                <li class="option-item1 swiper-slide">四月</li>
+                                <li class="option-item1 swiper-slide">五月</li>
+                                <li class="option-item1 swiper-slide">六月</li>
+                                <li class="option-item1 swiper-slide">七月</li>
+                            </ul> 
+                            <div class="swiper-button-prev swiper-button-prev3"></div>
+                            <div class="swiper-button-next swiper-button-next3"></div>
+                    </div>              
+                </li>
+            </ul>  
+            <div class="content cf">
+                <a href="" class="mon"><p>2018</p><h6>7月</h6></a>
+                <a href="javascript:;" class="ll"><img src="images/rili_l.png" alt=""></a>
+                <div class="wrap cf">
+                    <div id="wrapper" class="isoll">
+                        <ul class="cf tabs">
+                                <li class="scq tab"><p class="p">周一</p><h5 class="day">01</h5></li>
+                                <li class="tab"><p class="p">周二</p><h5 class="day">02</h5></li>
+                                <li class="tab"><p class="p">周三</p><h5 class="day">03</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">04</h5></li>
+                                <li class="tab"><p class="p">周五</p><h5 class="day">05</h5></li>
+                                <li class="tab"><p class="p">周六</p><h5 class="day">06</h5></li>
+                                <li class="tab"><p class="p">周日</p><h5 class="day">07</h5></li>
+                                <li class="scq tab"><p class="p">周一</p><h5 class="day">08</h5></li>
+                                <li class="tab "><p class="p">周四</p><h5 class="day">09</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">10</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">11</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">12</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">13</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">14</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">15</h5></li>  
+                                <li class="tab"><p class="p">周四</p><h5 class="day">16</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">17</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">18</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">19</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">20</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">21</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">22</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">23</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">24</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">25</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">26</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">27</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">28</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">29</h5></li>
+                                <li class="tab"><p class="p">周四</p><h5 class="day">30</h5></li>
+                        </ul>                  
+                    </div>
+                    <ol class="inner tabContents cf">
+                            <li class="tabContent cf">
+                                    <div class="swiper-father" style="position:relative;">
+                                        <div class=" swiper-container swiper-container2">
+                                                <ul class="swiper-wrapper">
+                                                    <li class="swiper-slide">
+                                                        <a href="">
+                                                        <img class="bg"src="images/rl_1.jpg" alt=""></a>
+                                                        <div class="dd">
+                                                                <h5>乔治·比才歌剧《卡门》</h5>
+                                                                <p>歌剧院</p>
+                                                                <p>19:30</p>
+                                                                <a href="#" class="play">立即订票</a>
+                                                        </div>          
+                                                        
+                                                        
+                                                    </li>
+                                                    <li class="swiper-slide">
+                                                            <a href=""><img class="bg" src="images/rl_2.jpg" alt=""></a>
+                                                            <div class="dd">
+                                                                    <h5>国家大剧院制作歌剧《意大利女郎...</h5>
+                                                                    <p>歌剧院</p>
+                                                                    <p>19:30</p>
+                                                                    <a href="#" class="play">立即订票</a>
+                                                            </div>
+                                                    </li>
+                                                    <li class="swiper-slide">
+                                                            <a href=""><img class="bg"src="images/rl_3.jpg" alt=""></a>
+                                                            <div class="dd">
+                                                                    <h5>联合制作普契尼歌剧《艺术家生涯》</h5>
+                                                                    <p>歌剧院</p>
+                                                                    <p>19:30</p>
+                                                                    <a href="#" class="play">立即订票</a>
+                                                            </div>
+                                                    </li>
+                                                    <li class="swiper-slide">
+                                                            <a href=""><img class="bg" src="images/rl_4.jpg" alt=""></a>
+                                                            <div class="dd">
+                                                                    <h5>国家大剧院制作威尔第《茶花女》</h5>
+                                                                    <p>歌剧院</p>
+                                                                    <p>19:30</p>
+                                                                    <a href="#" class="play">立即订票</a>
+                                                            </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="swiper-pagination"></div>                                      
+                                        </div>
+                                        <div class="swiper-button-prev swiper-button-prev2"></div>
+                                        <div class="swiper-button-next swiper-button-next2"></div>
+                                    </div>
+                            </li>                   
+                    </ol>
+                </div>
+                <a href="javascript:;" class="rr"><img src="images/rili_r.png" alt=""></a>
+                <a href="" class="mon1"><p>2018</p><h6>7月</h6></a>
+            </div>
+    </div>
+    <!-- 演出推荐 -->
+<div class="yctj ty">
+    <h2><img src="images/tit1.png" alt=""></h2>
+    <div class="tj">
+            <ul class="cf tabs">
+                <li class="tab tab1 active">特别推荐</li>
+                <li class="tab tab2">特别策划</li>
+            </ul>
+        <div class="tabContents tbtj">
+            <div class="tabContent">
+                <div class="swiper-father">
+                    <div class=" swiper-container swiper-container6">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide cf pic">
+                                    <ul class="two">
+                                        <li class="big">
+                                            <img src="images/tj1.jpg" alt="">
+                                            <div class="des">
+                                                <h5>李六乙导演作品——胡军、濮存昕、卢芳、荆浩主演《哈姆雷特》</h5>
+                                                <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                <a href="#" class="ding">立即订票</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <ol class="solo">
+                                                <li>
+                                                    <img src="images/tj2.jpg" alt="">
+                                                    <div class="des">
+                                                        <h6>2018国际钢琴系列：陈萨钢琴独奏音乐会</h6>
+                                                        <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                        <a href="#" class="ding">立即订票</a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="images/tj3.jpg" alt="">
+                                                    <div class="des">
+                                                        <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                        <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                        <a href="#" class="ding">立即订票</a>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+                                    <ul class="one">
+                                        <ol class="solo solol">
+                                            <li>
+                                                <img src="images/tj4.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>2018国际钢琴系列：陈萨钢琴独奏音乐会</h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj5.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj6.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </ul>
+                                    <ul class="one">
+                                        <ol class="solo solol">
+                                            <li>
+                                                <img src="images/tj7.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>2018国际钢琴系列：陈萨钢琴独奏音乐会</h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj8.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj9.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </ul>
+                                    <ul class="one">
+                                        <ol class="solo solol">
+                                            <li>
+                                                <img src="images/tj10.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>2018国际钢琴系列：陈萨钢琴独奏音乐会</h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj11.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj12.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </ul>
+                                </li>
+                                <li class="swiper-slide cf pic">
+                                    <ul class="one">
+                                        <ol class="solo solol">
+                                            <li>
+                                                <img src="images/tj4.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>2018国际钢琴系列：陈萨钢琴独奏音乐会</h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj5.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj6.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </ul>
+                                    <ul class="one">
+                                        <ol class="solo solol">
+                                            <li>
+                                                <img src="images/tj7.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>2018国际钢琴系列：陈萨钢琴独奏音乐会</h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj8.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj9.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </ul>
+                                    <ul class="one">
+                                        <ol class="solo solol">
+                                            <li>
+                                                <img src="images/tj4.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>2018国际钢琴系列：陈萨钢琴独奏音乐会</h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj5.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj6.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </ul>
+                                    <ul class="one">
+                                        <ol class="solo solol">
+                                            <li>
+                                                <img src="images/tj7.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>2018国际钢琴系列：陈萨钢琴独奏音乐会</h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj8.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj9.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </ul>
+                                    <ul class="one">
+                                        <ol class="solo solol">
+                                            <li>
+                                                <img src="images/tj10.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>2018国际钢琴系列：陈萨钢琴独奏音乐会</h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj11.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/tj12.jpg" alt="">
+                                                <div class="des">
+                                                    <h6>皇家苏格兰国家交响乐团音乐会 </h6>
+                                                    <p>2018/08/28 - 09/02<span>歌剧院</span></p>
+                                                    <a href="#" class="ding">立即订票</a>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>                                      
+                    </div>
+                    <div class="swiper-button-prev swiper-button-prev6"></div>
+                    <div class="swiper-button-next swiper-button-next6"></div>
+                </div>
+            </div>
+            <div class="tabContent">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 殿堂开发 -->
+<div class="dtkf ty">
+    <h2><img src="images/tit2.png" alt=""></h2>
+    <div class="inner">
+            <a href="#" class="jia"><img src="images/jia.png" alt=""></a>
+    </div> 
+    <div class="lop">
+        <img class="bg"src="images/dtkf_bg.jpg" alt="">
+        <div class="fly">
+            <div class="inn cf">
+                <div class="tol">
+                    <p class="com">欢迎光临</p>
+                    <h1>国家大剧院</h1>
+                    <p>—————————</p>
+                    <p class="ti">参观开放时间：9:00-17:00（周一闭馆）</p>
+                    <p class="ti ti1">票价：30元/张</p>
+                    <a href="">立即购票</a>
+                </div>
+                <div class="show">
+                    <div class="tabContents">
+                        <div class="tabContent">
+                            <ul class="cf">
+                                <li class="left z1">
+                                    <h2>艺术展览</h2>
+                                    <p>位于北水下廊道两侧的东西展厅、歌剧院五层的大剧院艺术馆、歌剧院一层南侧的艺术沙龙展厅和各个剧场环廊，共同构成了国家大剧院独特的艺术展览空间。</p>
+                                    <a href="#">了解详情</a>
+                                </li>
+                                <li class="left z2">
+                                    <img src="images/dtkf_l_1.jpg" alt="">
+                                    <h6>亦真亦幻——舞台道具背后的秘密</h6>
+                                    <p>2018/08/22-09/13 <span>艺术沙龙</span></p>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tabs ">
+                        <div >
+                            <ul class="cf">
+                                <li class="tab"><img src="images/dti3.png" alt=""><p>艺术展览</p></li>
+                                <li class="tab"><img src="images/dti1.png" alt=""><p>纪念品</p></li>
+                                <li class="tab"><img src="images/dti2.png" alt=""><p>餐饮服务</p></li>
+                                <li class="tab"><img src="images/dti5.png" alt=""><p>虚拟参观</p></li>
+                                <li class="tab"><img src="images/dti4.png" alt=""><p>会员商城</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 普及活动 -->
+<div class="pjhd ty">
+        <h2><img src="images/tit3.png" alt=""></h2>
+        <div class="inner">
+                <a href="#" class="jia"><img src="images/jia.png" alt=""></a>
+        </div> 
+        <div class="tj">
+                <ul class="cf tabs">
+                    <li class="tab tab1 active">艺术普及</li>
+                    <li class="tab tab2">会员专享</li>
+                </ul>
+            <div class="tabContents">
+             </div>
+        </div>
+</div>
+<!-- 资讯动态 -->
+<div class="zxdtd ty">
+        <h2><img src="images/tit4.png" alt=""></h2>
+        <div class="inner">
+                <a href="#" class="jia"><img src="images/jia.png" alt=""></a>
+        </div> 
+        <div class="tj">
+                <ul class="cf tabs">
+                    <li class="tab tab1 active">热点聚焦</li>
+                    <li class="tab tab2">剧院新闻</li>
+                </ul>
+            <div class="tabContents ">
+             </div>
+        </div>
+</div>
 
 
 
@@ -22,24 +1043,125 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    
-<script src="lib/jquery/jquery-3.2.1.min.js"></script>
-<script src="lib/swiper/swiper.min.3.js"></script>
-<script src="lib/touchSlide/TouchSlide.1.1.js"></script>
-<script src="lib/bootstrap.min.js"></script>
-<script src="js/index.js"></script>
-
-</body>
-
+    <script>
+         var mySwiper = new Swiper('.swiper-container1', {
+            //autoplay: true,//可选选项，自动滑动
+            loop:true,
+            pagination : '.swiper-pagination',
+        })
+    </script>
+    <script>
+            var mySwiper = new Swiper('.swiper-container2', {
+               //autoplay: true,//可选选项，自动滑动
+               loop:true,
+               pagination : '.swiper-pagination',
+               slidesPerView : 4,
+            // 如果需要前进后退按钮
+            prevButton: '.swiper-button-prev2',
+             nextButton: ' .swiper-button-next2',
+           })
+       </script>
+       <script>
+        var mySwiper = new Swiper('.swiper-container4', {
+           //autoplay: true,//可选选项，自动滑动
+           direction: 'vertical',
+           pagination : '.swiper-pagination',
+           slidesPerView : 5,
+           mousewheel: true,
+           loop:true,
+        // 如果需要前进后退按钮
+          prevButton: '.swiper-button-prev1',
+         nextButton: '.swiper-button-next1',
+       })
+   </script>
+          <script>
+            var mySwiper = new Swiper('.swiper-container5', {
+               //autoplay: true,//可选选项，自动滑动
+               direction: 'vertical',
+               pagination : '.swiper-pagination',
+               slidesPerView : 5,
+               mousewheel: true,
+               loop:true,
+            // 如果需要前进后退按钮
+              prevButton: '.swiper-button-prev3',
+             nextButton: '.swiper-button-next3',
+           })
+       </script>
+           <script>
+            var mySwiper = new Swiper('.swiper-container6', {
+               //autoplay: true,//可选选项，自动滑动
+               loop:true,
+               pagination : '.swiper-pagination',
+            // 如果需要前进后退按钮
+            prevButton: '.swiper-button-prev6',
+             nextButton: ' .swiper-button-next6',
+           })
+       </script>
+    <script type="text/javascript">
+        //int
+        var selectHead = document.getElementsByClassName('select-head')[0];
+        var selectHeadCont = document.getElementsByClassName('select-head-cont');
+        var Option = document.getElementsByClassName('option')[0];
+        var optionItem = document.getElementsByClassName('option-item');
+        var wraping = document.getElementsByClassName('wraping')[0];
+        /*默认是第一个选项*/
+        selectHeadCont[0].innerHTML = optionItem[0].innerHTML;
+        
+        /*点击后出现下拉框*/
+        selectHead.addEventListener('click',function(){
+            Option.style.display = 'block';
+            wraping.style.display = 'block';
+            wraping.style.opacity = '1';
+            wraping.style.zIndex = '999';
+        },false);
+        /*点击选项后出现在下拉框*/
+        var len = optionItem.length;
+        for(var i=0;i<len;i++){
+            optionItem[i].index = i;
+            optionItem[i].addEventListener('click',function(){
+                selectHeadCont[0].innerHTML = optionItem[this.index].innerHTML;
+                Option.style.display = 'none';
+                wraping.style.display = 'none';
+            },false);
+        }
+        /*点击其他地方时，select会收起来*/
+        document.body.addEventListener('click',function(){
+            Option.style.display = 'none';
+            wraping.style.display = 'none';
+        }.false);
+    </script>
+    <script type="text/javascript">
+        //int
+        var selectHead1 = document.getElementsByClassName('select-head1')[0];
+        var selectHeadCont1 = document.getElementsByClassName('select-head-cont1');
+        var Option1 = document.getElementsByClassName('option1')[0];
+        var optionItem1 = document.getElementsByClassName('option-item1');
+        var wraping1 = document.getElementsByClassName('wraping1')[0];
+        /*默认是第一个选项*/
+        selectHeadCont1[0].innerHTML = optionItem1[0].innerHTML;
+        
+        /*点击后出现下拉框*/
+        selectHead1.addEventListener('click',function(){
+            Option1.style.display = 'block';
+            wraping1.style.display = 'block';
+            wraping1.style.opacity = '1';
+            wraping1.style.zIndex = '999';
+        },false);
+        /*点击选项后出现在下拉框*/
+        var len = optionItem1.length;
+        for(var i=0;i<len;i++){
+            optionItem1[i].index = i;
+            optionItem1[i].addEventListener('click',function(){
+                selectHeadCont1[0].innerHTML = optionItem1[this.index].innerHTML;
+                Option1.style.display = 'none';
+                wraping1.style.display = 'none';
+            },false);
+        }
+        /*点击其他地方时，select会收起来*/
+        document.body.addEventListener('click',function(){
+            Option1.style.display = 'none';
+            wraping1.style.display = 'none';
+        }.false);
+    </script>
+  </body>
 </html>

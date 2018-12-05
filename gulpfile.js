@@ -104,15 +104,10 @@ gulp.task('server', function () {
 
   // 监听哪些任务
   gulp.watch(app.srcPath + '*.html', ['yun']);
-  gulp.watch(app.srcPath + 'm/*.html', ['yun']);
-  gulp.watch(app.srcPath + 'm/work/*.html', ['yun']);
   gulp.watch(app.srcPath + 'work/*.html', ['yun']);
   gulp.watch(app.srcPath + 'js/**/*.js', ['jsmin']);
-  gulp.watch(app.srcPath + 'm/js/**/*.js', ['jsmin']);
   gulp.watch(app.srcPath + 'images/**/*', ['image']);
-  gulp.watch(app.srcPath + 'm/images/**/*', ['image']);
-  gulp.watch(app.srcPath + 'css/**/*.scss', ['cssmin']);
-  gulp.watch(app.srcPath + 'm/css/**/*.scss', ['cssmin']);
+  gulp.watch(app.srcPath + 'css/*.scss', ['cssmin']);
   open('http://localhost:9999');
 });
 gulp.task('default', ['image','jsmin','cssmin','yun','ban','server']);
