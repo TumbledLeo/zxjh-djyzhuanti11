@@ -71,7 +71,28 @@ $(function(){
         $(ele + ' .tabContents .tabContent').hide().eq(index).fadeIn(500);
     });
   }
-   tabCtrl('.wrap');
+  function tabCtrl1(ele) {
+   // $(ele + ' .tabContents .tabContent').hide().eq(0).show();
+    $(ele + ' .tabs .tab').eq(0).addClass('active');
+    $(ele + ' .tabs .tab').click(function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        if ($(this).hasClass('active')) {
+            return;
+        }
+        $(this).addClass('active').siblings().removeClass('active');
+        var me = $(this);
+        var index = 0;
+        $(ele + ' .tabs .tab').each(function (i) {
+            if (me.get(0) === $(this).get(0)) {
+                index = i;
+            }
+        });
+        $(ele + ' .tabContents .tabContent').animate({height:"0"},100);
+        $(ele + ' .tabContents .tabContent').eq(index).animate({height:"300px"},100);
+    });
+  }
+   tabCtrl1('.wrap');
    tabCtrl('.yctj');
    tabCtrl('.show');
    tabCtrl('.pjhd');
@@ -133,9 +154,10 @@ selectHead.addEventListener('click',function(){
     wraping.style.display = 'block';
     wraping.style.opacity = '1';
     wraping.style.zIndex = '999';
+    $(".option").addClass('show');
     
 },false);
-/*点击选项后出现在下拉框*/
+/*点击选项后出收起下拉框*/
 var len = optionItem.length;
 for(var i=0;i<len;i++){
     optionItem[i].index = i;
@@ -143,13 +165,26 @@ for(var i=0;i<len;i++){
         selectHeadCont[0].innerHTML = optionItem[this.index].innerHTML;
         Option.style.display = 'none';
         wraping.style.display = 'none';
+        $(".option").removeClass('show');
     },false);
 }
 /*点击其他地方时，select会收起来*/
-$('document').click(function(){
-    Option.style.display = 'none';
-    wraping.style.display = 'none';
+$('document:not(.select-head)').click(function(){
+
+    $(".option").removeClass('show');
+    $('.option').css("display","none");
+    $('.wraping').css("display","none");
+    // Option.style.display = 'none';
+    // wraping.style.display = 'none';
 });
+
+// $("*").click(function (event) {
+//   if (!$(this).hasClass("select-head")){
+//     Option.style.display = 'none';
+//     wraping.style.display = 'none';
+//   }
+//   //event.stopPropagation();   
+// });
 
 var selectHead1 = document.getElementsByClassName('select-head1')[0];
 var selectHeadCont1 = document.getElementsByClassName('select-head-cont1');

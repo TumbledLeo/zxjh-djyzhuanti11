@@ -656,7 +656,7 @@ header .menu{
       -webkit-box-orient: vertical;
     }
     p{
-      font-size: 16px;
+      font-size: 14px;
       position: absolute;
       bottom:10px;
     }
@@ -971,6 +971,9 @@ header .menu{
     
   }
 }
+.contentt .tabContent{
+  overflow: hidden;
+}
 /*****************************************************************/
 .banner{
   width:100%;
@@ -1067,7 +1070,7 @@ select{
     background:#fff url(../images/select1.png)no-repeat;
     left:0;
     z-index:999;
-    background-position:54% 100%;
+    background-position:51% 100%;
     width:100%;
   }
   .swiper-button-next{
@@ -1075,7 +1078,7 @@ select{
     background:#fff url(../images/select.png)no-repeat;
     left:0;
     z-index:999;
-    background-position:54% 6%;
+    background-position:51% 6%;
     width:100%;
   }
 }
@@ -1118,7 +1121,7 @@ select{
 .option-item.swiper-slide{
   line-height:58px;
     width:100%;
-    text-indent:4px;
+    text-indent:-1px;
     cursor: pointer;
 }
 .option-item:hover{
@@ -1149,7 +1152,7 @@ opacity:0;
     background:#fff url(../images/select1.png)no-repeat;
     left:0;
     z-index:999;
-    background-position:54% 100%;
+    background-position:51% 100%;
     width:100%;
   }
   .swiper-button-next3{
@@ -1157,7 +1160,7 @@ opacity:0;
     background:#fff url(../images/select.png)no-repeat;
     left:0;
     z-index:999;
-    background-position:54% 6%;
+    background-position:51% 6%;
     width:100%;
   }
 }
@@ -1199,7 +1202,7 @@ opacity:0;
 .option-item1.swiper-slide{
   line-height:58px;
     width:100%;
-    text-indent:4px;
+    text-indent:-1px;
     cursor: pointer;
 }
 .option-item1:hover{
@@ -1332,7 +1335,7 @@ opacity:0;
         color:#b2b2b2;
       }
     }
-    li.active{
+    li.active,li:hover{
       .p,.day{
         color:#1854a2;
         font-weight: 600;
@@ -1440,7 +1443,7 @@ opacity:0;
 }
 .yctj{
   background:url(../images/yctj_bg.jpg)no-repeat right;
-  background-position:100% 22%;
+  background-position:100% 6%;
   margin-bottom:60px;
    .swiper-pagination-bullet{
     width: 37px;
@@ -2151,6 +2154,27 @@ height:640px;
     color:#000;
   }
 }
+.goupiao2{
+  margin-top:10%;
+  li{
+    width:50%;
+    position: relative;
+    img{
+      width:100%;
+    }
+    p{
+      position: absolute;
+      bottom:10px;
+      left:3%;
+      width:94%;
+      color:#fff;
+      font-size: 18px;
+      span{
+        float:right;
+      }
+    }
+  }
+}
 /**************************************************************************************************************************************/
   @media screen and (min-width:1601px) and (max-width: 1800px) {
     .sp_logo{
@@ -2574,4 +2598,7 @@ width: 334%;
           .return{
             width:50px;
           }
+          .goupiao2 li p {
+            font-size: 16px;
+        }
  }
