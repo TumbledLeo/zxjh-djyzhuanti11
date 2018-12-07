@@ -26,7 +26,6 @@ ol, ul, li {
 }
 .left{
   float:left;
-
 }
 .right{
   float:right;
@@ -37,7 +36,13 @@ ol, ul, li {
 .cf {
     zoom: 1;
 }
-
+.hang{
+  overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+}
 /* .hide{
   display:none;
 } */
@@ -164,6 +169,14 @@ header .cf .active{
   position: fixed;
   right: 37px;
   top: 37px;
+  z-index:99;
+  li{
+    width:11%;
+    margin-right:11%;
+    img{
+      width:100%;
+    }
+  }
 }
 header .menu .wrap{
   width:70%;
@@ -553,6 +566,7 @@ header .menu{
     text-align: center;
     position: relative;
     padding:0 1%;
+    
     .jia{
       position: absolute;
       right:4%;
@@ -572,6 +586,12 @@ header .menu{
     h4{
       font-size: 18px;
       margin:18px 10px;
+      color:#000;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
     p{
       font-size: 16px;
@@ -625,9 +645,15 @@ header .menu{
     display:inline-block;
     padding-left:20px;
     padding-right:10px;
+    color:#000;
     h3{
       line-height:30px;
       font-size: 18px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
     p{
       font-size: 16px;
@@ -1035,7 +1061,7 @@ select{
   color: #08499c;
   text-align: center;
   display:inline-block;
-  margin-right:30px;
+  margin-right:20px;
   .swiper-button-prev{
     top:0;
     background:#fff url(../images/select1.png)no-repeat;
@@ -1061,7 +1087,8 @@ select{
   padding: 0 10px;
   line-height: 40px;
   font-size: 24px;
-  font-weight: 600
+  font-weight: 600;
+  cursor: pointer;
 }
 .select-icon{
   width:18px;
@@ -1090,7 +1117,9 @@ select{
 }
 .option-item.swiper-slide{
   line-height:58px;
-    width:93%;
+    width:100%;
+    text-indent:4px;
+    cursor: pointer;
 }
 .option-item:hover{
   background:#08499c;
@@ -1115,7 +1144,6 @@ opacity:0;
   color: #08499c;
   text-align: center;
   display:inline-block;
-  margin-right:60px;
   .swiper-button-prev3{
     top:0;
     background:#fff url(../images/select1.png)no-repeat;
@@ -1141,7 +1169,8 @@ opacity:0;
   padding: 0 10px;
   line-height: 40px;
   font-size: 24px;
-  font-weight: 600
+  font-weight: 600;
+  cursor: pointer;
 }
 .select-icon1{
   width:18px;
@@ -1169,7 +1198,9 @@ opacity:0;
 }
 .option-item1.swiper-slide{
   line-height:58px;
-    width:93%;
+    width:100%;
+    text-indent:4px;
+    cursor: pointer;
 }
 .option-item1:hover{
   background:#08499c;
@@ -1187,7 +1218,10 @@ padding: 19px 0;
 opacity:0;
 }
 // 下拉框样式结束
-
+#wrapper{
+  background:url(../images/con_bg.png)no-repeat;
+  background-position:100% 0%;
+}
 .content{
   width:100%;
   //height:100px;
@@ -1271,11 +1305,12 @@ opacity:0;
       width:222%;
       height:100px;
       position: relative;
-      background:rgba(229,229,229,0.5);
+      //background:rgba(229,229,229,0.5);
     }
     li{
       float:left;
       width:116px;
+      cursor: pointer;
       .p{
         font-size: 16px;
         line-height:44px;
@@ -1357,10 +1392,12 @@ opacity:0;
     .swiper-button-prev{
       background:url(../images/rili_l.png)no-repeat;
       left:-40px;
+      top:45%;
     }
     .swiper-button-next{
       background:url(../images/rili_r.png)no-repeat;
-      right:-40px;
+      right:-55px;
+      top:45%;
     }
     .swiper-pagination-bullet{
       width: 37px;
@@ -1403,7 +1440,7 @@ opacity:0;
 }
 .yctj{
   background:url(../images/yctj_bg.jpg)no-repeat right;
-  background-position:100% -7%;
+  background-position:100% 22%;
   margin-bottom:60px;
    .swiper-pagination-bullet{
     width: 37px;
@@ -1466,7 +1503,7 @@ background:#dbc194;
           }
           h5{
             font-size: 2.16rem;
-            overflow: hidden;
+            overflow: hidden;//超出隐藏
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -1493,7 +1530,7 @@ background:#dbc194;
             background:#eeeeee;
             padding:7px 16px;
             position: relative;
-            height:75px;
+            height:77px;
     }
     li{
       margin-right:1%;
@@ -1530,6 +1567,12 @@ background:#dbc194;
         color:#000;
       }
     }
+    li:hover{
+      .des{
+        background:#394a64;
+        color:#fff;
+      }
+    }
   }
   .solo.solol{
     li{
@@ -1542,6 +1585,7 @@ background:#dbc194;
      
     }
   }
+
 }
 .ty {
   position: relative;
@@ -1585,7 +1629,7 @@ background:#dbc194;
     position: absolute;
     top:0;
     width:100%;
-    height: 92%;
+    height:93.5%;
     overflow: hidden;
   }
   .bg{
@@ -1599,7 +1643,7 @@ background:#dbc194;
     .tol{
       width:25%;
       margin:40px 0;
-      padding:8rem 0 18rem;
+      padding:8rem 0 20rem;
       padding-left:2%;
       padding-right:2%;
       background:rgba(15,21,36,0.8);
@@ -1656,16 +1700,22 @@ background:#dbc194;
         text-align: justify;
       }
       a{
-      color:#405578;
+      color:#0d3362;
       background:url(../images/to.png)no-repeat right;
       padding-right:16px;
       font-size: 18px;
       float:right;
       }
+      a.s3{
+        float:left;
+        margin-right:18%;
+        margin-top:40px;
+      }
     }
     .z2{
       width:60%;
       margin-top:6%;
+      position: relative;
       img{
         width:100%;
       }
@@ -1679,22 +1729,428 @@ background:#dbc194;
         margin-left:10px;
       }
       }
+      .too{
+        font-size: 18px;
+        color:#fff;
+        background:url(../images/too.png)no-repeat right;
+        padding-right:20px;
+        position: absolute;
+        bottom:10px;
+        right:10px;
+      }
     }
     .tabs{
       padding:0;
       text-align: center;
       padding:0 10%;
       height:200px;
+      margin-top:20px;
+      background:rgba(207,207,207,0.5);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width:80%;
+      .tab{
+        margin:0;
+        padding-top: 40px;
+        height: 200px;
+        width:20%;
+      }
       li{
         float:left;
-        width:16%;
+       
         font-size: 14px;
         color:#8a98aa;
+        p{
+          line-height:130px;
+        }
       }
+      .tt1{
+        background:url(../images/dti1.png)no-repeat top;
+        background-position: 50% 21%;
+      }
+      .tt2{
+        background:url(../images/dti2.png)no-repeat top;
+        background-position: 50% 22%;
+      }
+      .tt3{
+        background: url(../images/dti3.png)no-repeat top;
+        background-position: 50% 22%;
+      }
+      .tt4{
+        background:url(../images/dti4.png)no-repeat top;
+        background-position: 50% 22%;
+      }
+      .tt5{
+        background: url(../images/dti5.png)no-repeat top;
+        background-position: 50% 22%;
+      }
+      li.active ,li:hover{
+        color:#0d3362; 
+        position: relative;
+        i{
+          width:0;
+          height:0;
+          overflow:hidden;
+          font-size: 0;     /*是因为, 虽然宽高度为0, 但在IE6下会具有默认的 */
+          line-height: 0;  /* 字体大小和行高, 导致盒子呈现被撑开的长矩形 */
+          border-width:15px;
+          border-style: dashed dashed solid dashed;/*IE6下, 设置余下三条边的border-style为dashed,即可达到透明的效果*/
+          border-color: transparent transparent rgba(13,51,98,0.1) transparent;
+          position: absolute;
+          top:-30px;
+          left:50%;
+          margin-left:-15px;
+        } 
+      }
+      .tt1.active ,.tt1:hover{
+        background:rgba(13,51,98,0.1) url(../images/dti11.png)no-repeat top;
+        background-position: 50% 21%;
+      }
+      .tt2.active,.tt2:hover{
+        background:rgba(13,51,98,0.1) url(../images/dti22.png)no-repeat top;
+        background-position: 50% 22%;
+      }
+      .tt3.active,.tt3:hover{
+        background:rgba(13,51,98,0.1) url(../images/dti33.png)no-repeat top;
+        background-position: 50% 22%;
+      }
+      .tt4.active,.tt4:hover{
+        background:rgba(13,51,98,0.1) url(../images/dti44.png)no-repeat top;
+        background-position: 50% 22%;
+      }
+      .tt5.active,.tt5:hover{
+        background:rgba(13,51,98,0.1) url(../images/dti55.png)no-repeat top;
+        background-position: 50% 22%;
+      }
+
     }
   }
 }
+.pjhd{
+  margin:0 0 60px;
+  .tabContents{
+    li{
+      width:24%;
+      margin:0 0.1%;
+      position: relative;
+      img{
+        width:100%;
+      }
+      .des{
+        height:78px;
+        background:#eceae6;
+        padding:10px;
+        position: relative;
+        color:#000;
+        h6{
+          font-size: 18px;
+          overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        p{
+          font-size: 14px;
+          position: absolute;
+          bottom:10px;
+          width:94%;
+          span{
+            float:right;
+          }
+        }
+      } 
+      .i{
+        background:#dbc194;
+        color:#000;
+        display:block;
+        position: absolute;
+        top:10px;
+        left:10px;
+        padding:4px;
+        font-size: 16px;
+      }
+    }
+    li:hover{
+      .des{
+        background:#394a64;
+        color:#fff;
+      }
 
+    }
+  }
+}
+.zxdtd{
+  padding-bottom:100px;
+  background:url(../images/xw_bg.jpg)no-repeat;
+  background-position:100% 130%;
+  .a1 li{
+    width:30%;
+    margin-right:3.3%;
+    margin-left:0.1%;
+    position: relative;
+    .des{
+      height:70px;
+      padding:10px;
+      background:#eceae6;
+      .wxi{
+        position: absolute;
+        right:10px;
+        bottom:10px;
+        img{
+          width:21px;
+        }
+      }
+    }
+    h6{
+      font-size: 18px;
+    }
+    p{
+      font-size: 14px;
+      position: absolute;
+      bottom:10px;
+
+    }
+    a{
+      color:#000;
+    }
+    img{
+      width:100%;
+    }
+  }
+  .a2 li{
+    width:50%;
+    position: relative;
+    overflow: hidden;
+    img{
+      width:100%;
+    }
+    .dis{
+      position: absolute;
+      bottom:0;
+      width:100%;
+      padding:0 20px 20px;
+      height:16%;
+      background:rgba(15,29,47,0.8);
+      color:#fff;
+      h2{
+        text-align: left;
+        font-size: 18px;
+        position: absolute;
+        bottom:50%;
+      }
+      p{
+        font-size: 16px;
+        position: absolute;
+        bottom:12%;
+        span{
+          margin-left:20px;
+        }
+      }
+    }
+    .xw{
+      width:100%;
+      position: absolute;
+      top:0;
+      height:100%;
+      overflow: hidden;
+      li{
+        width:94%;
+        padding:0 20px;
+        height:33.3%;
+        a{
+          color:#000;
+        }
+      }
+      li:hover{
+
+        background:#5d6a7f;
+        a{
+          color:#fff;
+        }
+        
+      }
+      h2{
+        text-align: left;
+        font-size: 18px;
+        margin-top:30px;
+        overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+      }
+      p{
+        width:100%;
+        font-size: 16px;
+        margin-top:20px;
+        span{
+          float:right;
+        }
+      }
+    }
+  }
+  li:hover{
+    .des{
+      
+      background:#5d6a7e;
+      a{
+        color:#fff;
+      }
+    }  
+  }
+  li:last-child{
+    margin:0;
+  }
+}
+.wr{
+  text-align: center;
+  margin-top:180px;
+  ul{
+    padding:0 32%;
+  }
+  li{
+    float: left;
+    margin:0 10%;
+    p{
+      font-size: 20px;
+    }
+  }
+}
+footer{
+  img{
+    width:100%;
+  }
+}
+.return{
+  position:fixed;
+  bottom:200px;
+  right:34px;
+  z-index:99;
+  img{
+    width:100%;
+  }
+}
+// 特殊轮播
+.box{
+  width: 100%;
+  // height: 510px;
+height:640px;
+  position: relative;	
+  overflow: hidden;
+  // .list{
+  //   width: 1142px;
+  //   width:100%;
+  //   //height: 532px;
+  //   height:610px;
+  //   overflow: hidden;
+  //   position: absolute;
+  //   left: 50%;
+  //   margin-left: -565px;
+  // }
+  .list{
+    width:100%;
+    //height: 532px;
+    height:640px;
+    overflow: hidden;
+  }
+  .btn{
+    position: absolute;
+    top: 50%;
+    margin-top: -84px;
+    width: 60px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    z-index:99;
+  }
+  .next{
+    right: 0;
+  }
+  
+  li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    width:694px;
+    width:50%;
+  }
+  img{
+    width: 100%;
+    // height: 300px;
+    border:none;
+    float: left;
+  }
+  .p1{
+    transform:translate3d(-224px,0,0) scale(0.81);
+  }
+  .p2{
+    transform:translate3d(0px,0,0) scale(0.81);
+    transform-origin:0 50%;
+    opacity: 0.8;
+    z-index: 2;
+  }
+  .p3{
+    transform:translate3d(430px,0,0) scale(1);
+    z-index: 3;
+    opacity: 1;
+  }
+  .p4{
+    transform:translate3d(862px,0,0) scale(0.81);
+    transform-origin:100% 50%;
+    opacity: 0.8;
+    z-index: 2;
+  }
+  .p5{
+    transform:translate3d(672px,0,0) scale(0.81);
+  }
+  .p6{
+    transform:translate3d(896px,0,0) scale(0.81);
+  }
+  .p7{
+    transform:translate3d(1120px,0,0) scale(0.81);
+  }
+  
+  .buttons{
+    position: absolute;
+    width: 1200px;
+    height: 30px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -600px;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .buttons a{
+    display: inline-block;
+    width: 35px;
+    height: 5px;
+    padding-top: 4px;
+    cursor: pointer;
+  }
+  span{
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #08499c;
+  }
+  .blue{
+    background: #dfb81c;
+  }
+  p{
+    text-align: center;
+    font-size: 18px;
+    line-height:48px;
+    color:#000;
+  }
+}
 /**************************************************************************************************************************************/
   @media screen and (min-width:1601px) and (max-width: 1800px) {
     .sp_logo{
@@ -1785,8 +2241,29 @@ background:#dbc194;
         .dtkf .lop .show .z1 p {
           font-size: 14px;
           line-height: 22px;}
+          .dtkf .lop .fly {
+            height: 86%;}
+            .dtkf .lop .show {
+              width: 72%;}
+              .dtkf .lop .show .tabs {
+                bottom: 94px;}
+  .dtkf .lop .show .tabs .tab {
+                  padding-top: 0px;}
+                  .dtkf .lop .show .tabs li p {
+                    line-height: 191px;
+                }
+                .wr ul {
+                  padding: 0 29%;
+              }
+.zz li .wx {
+                right: 52px;
+              }
+              .box .p3 {
+                transform: translate3d(374px,0,0) scale(1);}
+                .box {
+                  height: 586px;}
 }
-  @media (max-width: 1600px) { 
+  @media (max-width: 1610px) { 
     .yctj .tabContents .pic .two .big h5 {
       font-size: 1.8rem;}
     .yctj .solo li h6 {
@@ -1924,14 +2401,36 @@ header .menu .wrap li{
             font-size: 14px;
         }
         .dtkf .lop .inn .tol {
-          padding: 5rem 1.6rem 10rem;}
+          padding: 5rem 1.6rem 15rem;}
           .dtkf .lop .inn .tol a{
-            bottom:40px;
+            bottom:100px;
           }
  
           .dtkf .lop .show .z1 p {
             font-size: 14px;
-            line-height: 22px;}       }
+            line-height: 22px;} 
+.dtkf .lop .show .tabs {
+              bottom: 110px;} 
+.dtkf .lop .show {
+    width: 71.7%;}   
+    .pjhd .tabContents li .des h6 {
+      font-size: 15px;
+  }
+  .pjhd .tabContents li .des p {
+    font-size: 12px;
+    width: 90%;
+}
+.wr ul {
+  padding: 0 28%;
+}
+.zz li .wx {
+  right: 32px;
+}
+.box .p3 {
+  transform: translate3d(361px,0,0) scale(1);}
+  .box {
+    height: 504px;}
+  }
 @media (max-width: 1500px) { 
   header .zong{
     width:971px;
@@ -2046,4 +2545,33 @@ width: 334%;
     height: 541px;}
 .yctj .tabContents .pic .two .big .des {
       padding: 34px 24px;}
+.dtkf .lop .fly{
+  height: 93%;
+      }
+.dtkf .lop .show .tabs{
+        bottom:120px;
+}
+      .dtkf .lop .show .tabs li p {
+        line-height: 80px;
+    }
+.dtkf .lop .show .tabs .tab {
+      height: 78px;}
+.dtkf .lop .show {
+        width: 71.4%;}
+        .wr ul {
+          padding: 0 25%;
+      }
+      // .box li{
+      //   width:390px;
+      // }
+      .box .p3{
+        transform:translate3d(304px,0,0) scale(1);
+      }
+      .box .p4 {
+        transform: translate3d(645px,0,0) scale(.81);}
+        .box {
+          height: 480px;}
+          .return{
+            width:50px;
+          }
  }
