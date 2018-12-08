@@ -200,7 +200,13 @@ for(var i=0;i<len;i++){
 //   }
 //   //event.stopPropagation();   
 // });
-
+// $('.select').click(function(){
+//     $('.set').css("display","block");
+//     $('.set,.rili').click(function(){
+//         $('.set').css("dosplay","none");
+//         $('.wraping').css("display","none");
+//     });
+// });
 var selectHead1 = document.getElementsByClassName('select-head1')[0];
 var selectHeadCont1 = document.getElementsByClassName('select-head-cont1');
 var Option1 = document.getElementsByClassName('option1')[0];
