@@ -155,6 +155,7 @@ selectHead.addEventListener('click',function(){
     wraping.style.opacity = '1';
     wraping.style.zIndex = '999';
     $(".option").addClass('show');
+    e.stopPropagation();
     
 },false);
 /*点击选项后出收起下拉框*/
@@ -168,15 +169,29 @@ for(var i=0;i<len;i++){
         $(".option").removeClass('show');
     },false);
 }
-/*点击其他地方时，select会收起来*/
-$('document:not(.select-head)').click(function(){
+// $(document).click(function(event){
+//     var ss =  $(".wraping").attr('style');
+//     var ll = ss.split(';')[3];
+//     var m = ll.split(':')[1];
 
-    $(".option").removeClass('show');
-    $('.option').css("display","none");
-    $('.wraping').css("display","none");
-    // Option.style.display = 'none';
-    // wraping.style.display = 'none';
-});
+//    // alert(m.trim()=='block');
+//     if(m.trim()=='block'){
+//       //  alert(1);
+//      $(".wraping").css("display","none");
+//     }else{
+//         return;
+//     }
+//     e.stopPropagation();
+//  }); 
+/*点击其他地方时，select会收起来*/
+// $('document:not(.select-head)').click(function(){
+
+//     $(".option").removeClass('show');
+//     $('.option').css("display","none");
+//     $('.wraping').css("display","none");
+//     // Option.style.display = 'none';
+//     // wraping.style.display = 'none';
+// });
 
 // $("*").click(function (event) {
 //   if (!$(this).hasClass("select-head")){
