@@ -103,25 +103,27 @@ $(function(){
     var x=xx.left;
     var ab = -1600;
     //alert(x);
-    if(x > ab){
-      var ll = Math.abs(x)+400;
-      //$(".content .isoll ul").css('left',ll);
-      $(".content .isoll ul").animate({left:-ll},1000);
-    }else{
-      return;
-    }
-    
+    // if(x > ab){
+    //   var ll = Math.abs(x)+400;
+    //   //$(".content .isoll ul").css('left',ll);
+    //   $(".content .isoll ul").animate({left:-ll},1000);
+    // }else{
+    //   return;
+    // }
+    $(".content .isoll ul").animate({left:-2437},1000);
   });
   $('.ll').click(function(){
     var yy=$(".content .isoll ul").offset();
     var y = yy.left;
-    if(y<140 && -1700<y){
-      var ll = y+400;
-      //$(".content .isoll ul").css('left',ll);
-      $(".content .isoll ul").animate({left:ll},1000);
-    }else{
-      return;
-    }
+    //alert(y);
+    $(".content .isoll ul").animate({left:108},1000);
+    // if(y<140 && -1700<y){
+    //   var ll = y+400;
+    //   //$(".content .isoll ul").css('left',ll);
+    //   $(".content .isoll ul").animate({left:ll},1000);
+    // }else{
+    //   return;
+    // }
     
   });
   $("#top").click(function() {
