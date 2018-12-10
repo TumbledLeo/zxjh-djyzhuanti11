@@ -149,7 +149,7 @@ var optionItem = document.getElementsByClassName('option-item');
 var wraping = document.getElementsByClassName('wraping')[0];
 /*默认是第一个选项*/
 selectHeadCont[0].innerHTML = optionItem[0].innerHTML;
-
+var s ='';
 /*点击后出现下拉框*/
 selectHead.addEventListener('click',function(){
     Option.style.display = 'block';
@@ -157,8 +157,9 @@ selectHead.addEventListener('click',function(){
     wraping.style.opacity = '1';
     wraping.style.zIndex = '999';
     $(".option").addClass('show');
-    e.stopPropagation();
-    
+    s=1;
+   // e.stopPropagation(); 
+    window.event? window.event.cancelBubble = true : e.stopPropagation();  
 },false);
 /*点击选项后出收起下拉框*/
 var len = optionItem.length;
@@ -171,6 +172,9 @@ for(var i=0;i<len;i++){
         $(".option").removeClass('show');
     },false);
 }
+
+
+
 // $(document).click(function(event){
 //     var ss =  $(".wraping").attr('style');
 //     var ll = ss.split(';')[3];
@@ -223,6 +227,8 @@ selectHead1.addEventListener('click',function(){
     wraping1.style.display = 'block';
     wraping1.style.opacity = '1';
     wraping1.style.zIndex = '999';
+    s=1;
+    window.event? window.event.cancelBubble = true : e.stopPropagation(); 
 },false);
 /*点击选项后出现在下拉框*/
 var len = optionItem1.length;
@@ -234,12 +240,25 @@ for(var i=0;i<len;i++){
         wraping1.style.display = 'none';
     },false);
 }
-/*点击其他地方时，select会收起来*/
-document.body.addEventListener('click',function(){
-    Option1.style.display = 'none';
-    wraping1.style.display = 'none';
-}.false);
-
+$('.select1 .swiper-button-prev3,.select1 .swiper-button-next3,.select .swiper-button-prev,.select .swiper-button-next').click(function(){
+    window.event? window.event.cancelBubble = true : e.stopPropagation(); 
+});
+// /*点击其他地方时，select会收起来*/
+// document.body.addEventListener('click',function(){
+//     Option1.style.display = 'none';
+//     wraping1.style.display = 'none';
+// }.false);
+$(document).click(function(){
+    if(s===1){
+    //alert(1);
+    Option.style.display = 'none';
+     wraping.style.display = 'none';
+     Option1.style.display = 'none';
+     wraping1.style.display = 'none';
+    }
+    //e.stopPropagation(); 
+    window.event? window.event.cancelBubble = true : e.stopPropagation(); 
+});
 
 
 //特殊轮播

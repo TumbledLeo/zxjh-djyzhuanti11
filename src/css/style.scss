@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 a {
   text-decoration: none;
+  color:#000;
 }
 /* a:hover {
   text-decoration: underline;
@@ -275,6 +276,9 @@ header .menu{
 
 
 /* //public **********************************************************************************************************/
+.top_logo{
+  width:128px;position: absolute;left:50%;margin-left:-64px;z-index:999;
+}
 .yanc{
   width:74%;
   margin:60px auto 34px;
@@ -482,6 +486,9 @@ header .menu{
           font-size: 18px;
           color:#fff;
           line-height:40px;
+          overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
         }
         p{
           font-size: 14px;
@@ -669,18 +676,21 @@ header .menu{
     line-height:100px;
     font-size: 18px;
     color:#000;
+    padding-left:24px;
   }
   .ysjl2 p{
     background:url(../images/ysjl2.png)no-repeat left;
     line-height:100px;
     font-size: 18px;
     color:#000;
+    padding-left:24px;
   }
   .ysjl3 p{
     background:url(../images/ysjl3.png)no-repeat left;
     line-height:100px;
     font-size: 18px;
     color:#000;
+    padding-left:24px;
   }
   
 }
@@ -700,7 +710,7 @@ header .menu{
       left:104px;
     }
     p{
-      font-size: 15px;
+      font-size: 14px;
       color:#000;
       line-height:40px;
     }
@@ -1270,6 +1280,7 @@ opacity:0;
     background:rgba(229,229,229,0.5);
     width:42px;
     height:100px;
+    z-index:999;
     img{
       position: absolute;
       top:44px;
@@ -1324,7 +1335,7 @@ opacity:0;
     position: relative;
     //background:rgba(229,229,229,0.5);
     ul{
-      width:222%;
+      width:224%;
       height:100px;
       position: relative;
       //background:rgba(229,229,229,0.5);
@@ -1365,14 +1376,14 @@ opacity:0;
   }
   .inner{
     margin-top:50px;
-    .swiper-wrapper{
-      margin-left:-28px;
-    }
+    // .swiper-wrapper{
+    //   margin-left:-28px;
+    // }
     .swiper-container2{
       height:320px;
     }
     li{
-      margin-right: 4px;
+      // margin-right: 4px;
       img{
         width:100%;
         margin:0 auto;
@@ -1437,6 +1448,8 @@ opacity:0;
    height:92px;
    background:#eeeeee;
    position: relative;
+   width:99%;
+   margin:0 auto;
  }
 }
 .rili{
@@ -1565,7 +1578,7 @@ background:#dbc194;
         overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
       }
       p{
@@ -1593,7 +1606,10 @@ background:#dbc194;
     li:hover{
       .des{
         background:#394a64;
-        color:#fff;
+        a{
+          color:#fff;
+        }
+        
       }
     }
   }
@@ -1731,7 +1747,7 @@ background:#dbc194;
       }
       a.s3{
         float:left;
-        margin-right:18%;
+        margin-right:15%;
         margin-top:40px;
       }
     }
@@ -1850,6 +1866,15 @@ background:#dbc194;
     }
   }
 }
+.yctj .tabContents .pic .two .big:hover{
+  .des{
+    background:#394a64;
+    a{
+      color:#fff;
+    }
+    
+  }
+}
 .pjhd{
   margin:0 0 60px;
   .tabContents{
@@ -1867,7 +1892,7 @@ background:#dbc194;
         position: relative;
         color:#000;
         h6{
-          font-size: 18px;
+          font-size: 16px;
           overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -1904,6 +1929,10 @@ background:#dbc194;
     }
   }
 }
+.pjhd .tabContents li .i{
+  font-size: 14px;
+}
+
 .zxdtd{
   padding-bottom:100px;
   background:url(../images/xw_bg.jpg)no-repeat;
@@ -1927,7 +1956,7 @@ background:#dbc194;
       }
     }
     h6{
-      font-size: 18px;
+      font-size: 16px;
     }
     p{
       font-size: 14px;
@@ -1959,7 +1988,7 @@ background:#dbc194;
       color:#fff;
       h2{
         text-align: left;
-        font-size: 18px;
+        font-size: 16px;
         position: absolute;
         bottom:50%;
       }
@@ -2027,19 +2056,27 @@ background:#dbc194;
     margin:0;
   }
 }
+.zxdtd .a2 li .xw h2{
+  font-size: 16px;
+}
+.zxdtd .a2 li .xw p,.zxdtd .a2 li .dis p{
+  font-size: 14px;
+}
 .wr{
   text-align: center;
   margin-top:180px;
   ul{
-    padding:0 32%;
+    padding:0 38%;
   }
   li{
     float: left;
-    margin:0 10%;
     margin-right:0;
     p{
       font-size: 20px;
     }
+  }
+  .r{
+    margin:0 20%;
   }
 }
 footer{
@@ -2197,6 +2234,20 @@ height:640px;
     }
   }
 }
+
+// 12/10修改
+.content .inner .swiper-wrapper ol li{
+  width:25%;
+  margin:0 auto;
+
+}
+.content .inner li img{
+  width:99%;
+  margin:0 auto;
+}
+.option-item1.swiper-slide, .option-item.swiper-slide{
+  font-size: 16px;
+}
 /**************************************************************************************************************************************/
   @media screen and (min-width:1601px) and (max-width: 1800px) {
     .sp_logo{
@@ -2298,11 +2349,11 @@ height:640px;
                   .dtkf .lop .show .tabs li p {
                     line-height: 191px;
                 }
-                .wr ul {
-                  padding: 0 29%;
-              }
+.wr ul {
+      padding: 0 36%;
+    }
 .zz li .wx {
-                right: 52px;
+                left: 94px;
               }
               .box .p3 {
                 transform: translate3d(374px,0,0) scale(1);}
@@ -2460,23 +2511,18 @@ header .menu .wrap li{
 .dtkf .lop .show {
     width: 71.7%;}   
     .pjhd .tabContents li .des h6 {
-      font-size: 15px;
+      font-size: 16px;
   }
   .pjhd .tabContents li .des p {
     font-size: 12px;
     width: 90%;
 }
 .wr ul {
-  padding: 0 28%;
-  li{
-    margin:0 10%;
-  }
-  li:last-child{
-    margin-left:10%;
-  }
+  padding: 0 34%;
+
 }
 .zz li .wx {
-  right: 32px;
+  left: 86px;
 }
 .box .p3 {
   transform: translate3d(361px,0,0) scale(1);}
@@ -2538,7 +2584,13 @@ header .menu .wrap li{
 .huiy .l1 p {
       font-size: 12px;}
 .yssc .h1 ol li h4 {
-        font-size: 13px;
+        font-size: 14px;
+        
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
         line-height: 26px;
     }
     .yssc .h1 ol li p {
@@ -2586,6 +2638,7 @@ header .menu .wrap li{
 }
 .content .isoll ul{
 width: 334%;
+padding-left:50px;
 }
 .yctj .tabContents .pic .two .big .des .ding {
   width: 7.8rem;
@@ -2612,7 +2665,7 @@ width: 334%;
 .dtkf .lop .show {
         width: 71.4%;}
         .wr ul {
-          padding: 0 24%;
+          padding: 0 32%;
       }
       // .box li{
       //   width:390px;
@@ -2642,4 +2695,172 @@ width: 334%;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap; }
+          .yctj .solo li .ding {
+            font-size: 12px;
+            width: 54px;
+            height: 26px;
+            line-height: 26px;}
+            .zz li .wx {
+              left: 69px;
+          }
  }
+ @media (max-width: 1300px){
+.wr ul {
+  padding: 0 32%;
+}
+.yanc li .buy .pon {
+  font-size: 20px;}
+  .yanc li .buy .pon2 {
+    margin-left: 18px;}
+  .yanc li .buy .pon2 a {
+    margin-right: 6px;
+}
+.dtkf .lop .show .tabs {
+  bottom: 142px;
+}
+.dtkf .lop .show .z1 {
+  width: 25%;
+  margin: 6% 4% 0;
+}
+.dtkf .lop .show .z1 a.s3 {
+  float: left;
+  margin-right: 13%;}
+  .dtkf .lop .inn .tol a {
+    bottom: 117px;
+}
+  .yctj .tabContents .pic .two .big {
+    height: auto; 
+}
+.about .content {
+  padding: 0 18px;
+}
+.about .content .c6 {
+  text-align: right;
+  width: 260px;
+}
+.zxdt .ysjl1 p,.zxdt .ysjl2 p,.zxdt .ysjl3 p{
+  padding-left: 43px;
+}
+.yssc .h1 ol li p {
+  font-size: 12px;
+  position: absolute;
+  bottom: -15px;
+}
+.yshd .pic p {
+  font-size: 12px;
+}
+.img {
+  right: 0px;
+  width: 153px;
+}
+.yanc li h2 ,.cang h2,.yctj .tabContents .pic .two .big h5{
+  font-size: 20px;}
+  .yanc li .rl1 ,.yanc li .rl2,.yanc li ol li p,.yanc.show li a p,.cang .man .icon a p,.cang .man li .com h4,.cang .right p,.yshd .pic h4,.zxdt .right1 h3,.zxdt .ysjl2 p,.zxdt .ysjl3 p,.zxdt .ysjl1 p,.gdyy ul li p,.gdyy ol li a p,.huiy li ol.r1 li h5,.yssc .h2 li p,.yssc .h1 ol li h4,.pjhd .tabContents li .des h6,.zxdtd .a1 li h6,.option-item.swiper-slide,.option-item1.swiper-slide{
+    font-size: 16px;}
+    .yanc li ol li{
+      img{
+        width:80%;
+        margin:0 auto;
+      }
+    }
+    .yanc li.fiv .con a {
+      text-align: center;
+  }
+  .cang .gp .gp_a a {
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+
+}
+.cang .right .dc {
+  left: 129px;
+}
+.yshd .pic {
+  height: 278px;
+}
+.gdyy ol li{
+  margin-top: 80px;
+  img{
+    width:44%;
+  }
+}
+.about li ol li{
+  img{
+    width:50%;
+  }
+}
+.top_logo{
+  width:105px;
+}
+.sp_logo {
+  margin-left: 103px;
+}
+.huiy li ol.r1 li a h5{
+padding-right:4px;
+margin-top:6px;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets{
+  bottom:54px;
+}
+.dtkf .lop .show .z1 h2 {
+  font-size: 20px;}
+  .dtkf .lop .show .z2 h6 {
+    font-size: 16px;
+    line-height: 34px;}
+    .dtkf .lop .show .z1 a {
+      font-size: 14px;
+      margin-top: 16px;
+  }
+.dtkf .lop .show .tabs .tt1.active, .dtkf .lop .show .tabs .tt1:hover {
+  background: rgba(13,51,98,.1) url(../images/dti11.png) no-repeat top;
+  background-position: 50% 35%;
+  background-size: 28%;
+}
+.dtkf .lop .show .tabs .tt2.active, .dtkf .lop .show .tabs .tt2:hover {
+  background: rgba(13,51,98,.1) url(../images/dti22.png) no-repeat top;
+  background-position: 50% 35%;
+  background-size: 28%;
+}
+.dtkf .lop .show .tabs .tt3.active, .dtkf .lop .show .tabs .tt3:hover {
+  background: rgba(13,51,98,.1) url(../images/dti33.png) no-repeat top;
+  background-position: 50% 35%;
+  background-size: 28%;
+}
+.dtkf .lop .show .tabs .tt4.active, .dtkf .lop .show .tabs .tt4:hover {
+  background: rgba(13,51,98,.1) url(../images/dti44.png) no-repeat top;
+  background-position: 50% 35%;
+  background-size: 28%;
+}
+.dtkf .lop .show .tabs .tt5.active, .dtkf .lop .show .tabs .tt5:hover {
+  background: rgba(13,51,98,.1) url(../images/dti55.png) no-repeat top;
+  background-position: 50% 35%;
+  background-size: 28%;
+}
+.dtkf .lop .show .tabs .tt1 {
+  background: rgba(13,51,98,.1) url(../images/dti1.png) no-repeat top;
+  background-position: 50% 35%;
+  background-size: 28%;
+}
+.dtkf .lop .show .tabs .tt2{
+  background: rgba(13,51,98,.1) url(../images/dti2.png) no-repeat top;
+  background-position: 50% 35%;
+  background-size: 28%;
+}
+.dtkf .lop .show .tabs .tt3 {
+  background: rgba(13,51,98,.1) url(../images/dti3.png) no-repeat top;
+  background-position: 50% 35%;
+  background-size: 28%;
+}
+.dtkf .lop .show .tabs .tt4 {
+  background: rgba(13,51,98,.1) url(../images/dti4.png) no-repeat top;
+  background-position: 50% 35%;
+  background-size: 28%;
+}
+.dtkf .lop .show .tabs .tt5 {
+  background: rgba(13,51,98,.1) url(../images/dti5.png) no-repeat top;
+  background-position: 50% 35%;
+  background-size: 28%;
+}
+.swiper-father .swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 50px;}
+}
