@@ -512,6 +512,7 @@ header .menu{
         p{
           color:#000;
           font-size: 20px;
+          line-height:46px;
         }
       }
     }
@@ -656,7 +657,7 @@ header .menu{
     h3{
       line-height:30px;
       font-size: 18px;
-      width:150px;
+      width:267px;
       text-overflow: -o-ellipsis-lastline;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -676,21 +677,24 @@ header .menu{
     line-height:100px;
     font-size: 18px;
     color:#000;
-    padding-left:24px;
+    width:200px;
+    //padding-left:24px;
   }
   .ysjl2 p{
+    width:200px;
     background:url(../images/ysjl2.png)no-repeat left;
     line-height:100px;
     font-size: 18px;
     color:#000;
-    padding-left:24px;
+    //padding-left:24px;
   }
   .ysjl3 p{
+    width:200px;
     background:url(../images/ysjl3.png)no-repeat left;
     line-height:100px;
     font-size: 18px;
     color:#000;
-    padding-left:24px;
+    // padding-left:24px;
   }
   
 }
@@ -764,7 +768,7 @@ header .menu{
     li{
       width:50%;
       text-align: center;
-      line-height: 42px;
+      line-height: 67px;
       margin-top: 64px;
       a{
         color:#000;
@@ -787,7 +791,7 @@ header .menu{
     }
   }
   .h2{
-    width:37%;
+    width:35%;
     position: relative;
     padding-left:3%;
     .jia{
@@ -808,15 +812,14 @@ header .menu{
       width:100%;
     }
     h5{
-      font-size: 18px;
+      font-size: 16px;
       text-align: left;
       text-indent:10px;
       color:#000;
+      margin-top:8px;
       overflow: hidden;
-
-text-overflow: ellipsis;
-
-white-space: nowrap;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     p{
       text-align: left;
@@ -884,7 +887,7 @@ white-space: nowrap;
       line-height:30px;
     }
     p{
-      font-size: 16px;
+      font-size: 14px;
       text-align: left;
       margin-top: 0px;
     }
@@ -1009,6 +1012,10 @@ white-space: nowrap;
   .bg{
     width:100%;
   }
+  .bg2{
+    position: absolute;
+    bottom:0;
+  }
   .slidd{
     position: absolute;
     top:18%;
@@ -1049,7 +1056,7 @@ white-space: nowrap;
   }
   .swiper-container1 .swiper-pagination-bullet{
     width: 37px;
-    height: 3px;
+    height: 2px;
     display: inline-block;
     border-radius: 0;
     background: #08499c;
@@ -1380,7 +1387,7 @@ opacity:0;
     //   margin-left:-28px;
     // }
     .swiper-container2{
-      height:320px;
+      height:350px;
     }
     li{
       // margin-right: 4px;
@@ -1406,20 +1413,20 @@ opacity:0;
         line-height:20px;
       }
       .play{
-        background:#dbc194;
-        color:#000;
-        width:80px;
-        height:30px;
-        line-height:30px;
+        background: #dbc194;
+        width: 60px;
+        height: 30px;
         text-align: center;
-        display:block;
+        line-height: 30px;
+        display: block;
         position: absolute;
-        right:10px;
-        bottom:10px;
+        bottom: 10px;
+        right: 10px;
+        color: #000;
       }
     }
     .tabContent{
-      width:80%;
+      width:94%;
       margin:0 auto;
     }
     .swiper-button-prev{
@@ -1576,11 +1583,21 @@ background:#dbc194;
       h6{
         font-size: 1.5rem;
         overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
+            // text-overflow: ellipsis;
+            // display: -webkit-box;
+            // -webkit-line-clamp: 1;
+            // -webkit-box-orient: vertical;
+            white-space: nowrap;/*不换行*/
+            text-overflow:ellipsis;/*超出部分文字以...显示*/
       }
+
+      // h6{font-size: 1.5rem;position: relative; line-height: 20px; max-height: 20px;overflow: hidden;}
+      // h6::after{content: "..."; position: absolute; bottom: 0; right: 0; padding-left: 40px;
+      // // background: -webkit-linear-gradient(left, transparent, #fff 55%);
+      // // background: -o-linear-gradient(right, transparent, #fff 55%);
+      // // background: -moz-linear-gradient(right, transparent, #fff 55%);
+      // // background: linear-gradient(to right, transparent, #fff 55%);
+      // }
       p{
         font-size: 1.16rem;
         position: absolute;
@@ -1726,7 +1743,7 @@ background:#dbc194;
     right:0;
     color:#000;
     .z1{
-      width:20%;
+      width:24%;
       margin:6% 6% 0;
       h2{
         font-size: 28px;
@@ -1957,6 +1974,9 @@ background:#dbc194;
     }
     h6{
       font-size: 16px;
+      overflow: hidden;/*超出部分隐藏*/
+            white-space: nowrap;/*不换行*/
+            text-overflow:ellipsis;/*超出部分文字以...显示*/
     }
     p{
       font-size: 14px;
@@ -2088,7 +2108,7 @@ footer{
   position:fixed;
   bottom:200px;
   right:34px;
-  z-index:99;
+  z-index:999999;
   display:none;
   img{
     width:100%;
@@ -2192,19 +2212,22 @@ height:640px;
   }
   .buttons a{
     display: inline-block;
-    width: 35px;
+    width: 37px;
     height: 5px;
     padding-top: 4px;
     cursor: pointer;
+    margin:0 5px;
+    font-size: 0;
   }
   span{
     display: block;
-    width: 30px;
+    width: 37px;
     height: 2px;
     background: #08499c;
   }
   .blue{
     background: #dfb81c;
+    font-size: 0;
   }
   p{
     text-align: center;
@@ -2248,6 +2271,8 @@ height:640px;
 .option-item1.swiper-slide, .option-item.swiper-slide{
   font-size: 16px;
 }
+.swiper-button-prev{
+  left: 20px;}
 /**************************************************************************************************************************************/
   @media screen and (min-width:1601px) and (max-width: 1800px) {
     .sp_logo{
@@ -2359,8 +2384,22 @@ height:640px;
                 transform: translate3d(374px,0,0) scale(1);}
                 .box {
                   height: 586px;}
+                  .content .inner .swiper-button-prev {
+                    left: -36px;}
+                    .content .inner .swiper-button-next {
+                      right: -50px;}
+                      .content .isoll ul {
+                        width: 270%;}
+                        .zxdt .right1 h3{
+                          width:200px;
+                        }
 }
   @media (max-width: 1610px) { 
+    .content .inner .swiper-button-next {
+      right: -48px;
+    }  
+    .content .inner .swiper-button-prev {
+      left: -32px;}
     .yctj .tabContents .pic .two .big h5 {
       font-size: 1.8rem;}
     .yctj .solo li h6 {
@@ -2507,7 +2546,7 @@ header .menu .wrap li{
             font-size: 14px;
             line-height: 22px;} 
 .dtkf .lop .show .tabs {
-              bottom: 110px;} 
+              bottom: 84px;} 
 .dtkf .lop .show {
     width: 71.7%;}   
     .pjhd .tabContents li .des h6 {
@@ -2528,8 +2567,63 @@ header .menu .wrap li{
   transform: translate3d(361px,0,0) scale(1);}
   .box {
     height: 504px;}
+    .content .inner .swiper-container2 {
+      height: 314px;
+  }
+
+  .dtkf .lop .show .tabs .tt1.active, .dtkf .lop .show .tabs .tt1:hover {
+ 
+    background-position: 50% 12%;
+    background-size: 28%;
+  }
+  .dtkf .lop .show .tabs .tt2.active, .dtkf .lop .show .tabs .tt2:hover {
+    background-position: 50% 12%;
+    background-size: 28%;
+  }
+  .dtkf .lop .show .tabs .tt3.active, .dtkf .lop .show .tabs .tt3:hover {
+    background-position: 50% 12%;
+    background-size: 28%;
+  }
+  .dtkf .lop .show .tabs .tt4.active, .dtkf .lop .show .tabs .tt4:hover {
+    background-position: 50% 12%;
+    background-size: 28%;
+  }
+  .dtkf .lop .show .tabs .tt5.active, .dtkf .lop .show .tabs .tt5:hover {
+    background-position: 50% 12%;
+    background-size: 28%;
+  }
+  .dtkf .lop .show .tabs .tt1 {
+    background-position: 50% 12%;
+    background-size: 28%;
+  }
+  .dtkf .lop .show .tabs .tt2{
+    background-position: 50% 12%;
+    background-size: 28%;
+  }
+  .dtkf .lop .show .tabs .tt3 {
+    background-position: 50% 12%;
+    background-size: 28%;
+  }
+  .dtkf .lop .show .tabs .tt4 {
+    background-position: 50% 12%;
+    background-size: 28%;
+  }
+  .dtkf .lop .show .tabs .tt5 {
+    background-position: 50% 12%;
+    background-size: 28%;
+  }
+  .dtkf .lop .show .tabs li p {
+
+    line-height: 95px;
+
+}
   }
 @media (max-width: 1500px) { 
+  .dtkf .lop .show .tabs {
+
+    bottom: 78px;
+
+}
   header .zong{
     width:971px;
     margin:0 auto;
@@ -2585,13 +2679,15 @@ header .menu .wrap li{
       font-size: 12px;}
 .yssc .h1 ol li h4 {
         font-size: 14px;
-        
         overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
+        // text-overflow: ellipsis;
+        // display: -webkit-box;
+        // -webkit-line-clamp: 1;
+        // -webkit-box-orient: vertical;
         line-height: 26px;
+        overflow: hidden;/*超出部分隐藏*/
+            white-space: nowrap;/*不换行*/
+            text-overflow:ellipsis;/*超出部分文字以...显示*/
     }
     .yssc .h1 ol li p {
       font-size: 12px;}
@@ -2600,7 +2696,11 @@ header .menu .wrap li{
         font-size: 15px;}
 .about .h2{
           padding-left:1%;
+          width:40%;
 }
+.huiy .h1 {
+
+  width: 59%;}
 .about li ol li p {
   font-size: 16px;
 }
@@ -2658,10 +2758,10 @@ padding-left:50px;
         bottom:120px;
 }
       .dtkf .lop .show .tabs li p {
-        line-height: 66px;
+        line-height: 76px;
     }
 .dtkf .lop .show .tabs .tab {
-      height: 48px;}
+      height: 94px;}
 .dtkf .lop .show {
         width: 71.4%;}
         .wr ul {
@@ -2703,6 +2803,41 @@ padding-left:50px;
             .zz li .wx {
               left: 69px;
           }
+          .hc{
+            width:80%;
+          }
+          .content .inner .swiper-button-prev {
+            left: -30px;}
+            .content .inner .swiper-button-next {
+              right: -45px;
+            }   
+            .content .inner .swiper-container2 {
+              height: 310px;
+          }    
+          .zxdt .right1 h3 {
+            width: 140px;}  
+
+            .dtkf .lop .show .tabs .tab {
+
+              height: 34px;
+          
+          }
+          .dtkf .lop .show .tabs li p {
+
+            line-height: 42px;
+        
+        }
+        .dtkf .lop .show .tabs .tab {
+
+          height: 70px;
+      
+      }
+      .huiy .sq{
+        font-size: 14px;
+      }
+      .yssc.huiy .h1 {
+        width: 50%;
+    }
  }
  @media (max-width: 1300px){
 .wr ul {
@@ -2716,7 +2851,7 @@ padding-left:50px;
     margin-right: 6px;
 }
 .dtkf .lop .show .tabs {
-  bottom: 142px;
+  bottom: 150px;
 }
 .dtkf .lop .show .z1 {
   width: 25%;
@@ -2738,9 +2873,7 @@ padding-left:50px;
   text-align: right;
   width: 260px;
 }
-.zxdt .ysjl1 p,.zxdt .ysjl2 p,.zxdt .ysjl3 p{
-  padding-left: 43px;
-}
+
 .yssc .h1 ol li p {
   font-size: 12px;
   position: absolute;
@@ -2755,7 +2888,7 @@ padding-left:50px;
 }
 .yanc li h2 ,.cang h2,.yctj .tabContents .pic .two .big h5{
   font-size: 20px;}
-  .yanc li .rl1 ,.yanc li .rl2,.yanc li ol li p,.yanc.show li a p,.cang .man .icon a p,.cang .man li .com h4,.cang .right p,.yshd .pic h4,.zxdt .right1 h3,.zxdt .ysjl2 p,.zxdt .ysjl3 p,.zxdt .ysjl1 p,.gdyy ul li p,.gdyy ol li a p,.huiy li ol.r1 li h5,.yssc .h2 li p,.yssc .h1 ol li h4,.pjhd .tabContents li .des h6,.zxdtd .a1 li h6,.option-item.swiper-slide,.option-item1.swiper-slide{
+  .yanc li .rl1 ,.yanc li .rl2,.yanc li ol li p,.yanc.show li a p,.cang .man .icon a p,.cang .man li .com h4,.cang .right p,.yshd .pic h4,.zxdt .right1 h3,.zxdt .ysjl2 p,.zxdt .ysjl3 p,.zxdt .ysjl1 p,.gdyy ul li p,.gdyy ol li a p,.huiy li ol.r1 li h5,.yssc .h2 li p,.yssc .h1 ol li h4,.pjhd .tabContents li .des h6,.zxdtd .a1 li h6,.option-item.swiper-slide,.option-item1.swiper-slide,.huiy li ol.r1 li h5{
     font-size: 16px;}
     .yanc li ol li{
       img{
@@ -2779,10 +2912,14 @@ padding-left:50px;
   height: 278px;
 }
 .gdyy ol li{
-  margin-top: 80px;
+  margin-top: 30px;
   img{
     width:44%;
   }
+}
+.gdyy ol {
+
+  margin-top: 16px;
 }
 .about li ol li{
   img{
@@ -2812,55 +2949,80 @@ margin-top:6px;
       margin-top: 16px;
   }
 .dtkf .lop .show .tabs .tt1.active, .dtkf .lop .show .tabs .tt1:hover {
-  background: rgba(13,51,98,.1) url(../images/dti11.png) no-repeat top;
+
   background-position: 50% 35%;
   background-size: 28%;
 }
 .dtkf .lop .show .tabs .tt2.active, .dtkf .lop .show .tabs .tt2:hover {
-  background: rgba(13,51,98,.1) url(../images/dti22.png) no-repeat top;
+
   background-position: 50% 35%;
   background-size: 28%;
 }
 .dtkf .lop .show .tabs .tt3.active, .dtkf .lop .show .tabs .tt3:hover {
-  background: rgba(13,51,98,.1) url(../images/dti33.png) no-repeat top;
+
   background-position: 50% 35%;
   background-size: 28%;
 }
 .dtkf .lop .show .tabs .tt4.active, .dtkf .lop .show .tabs .tt4:hover {
-  background: rgba(13,51,98,.1) url(../images/dti44.png) no-repeat top;
+
   background-position: 50% 35%;
   background-size: 28%;
 }
 .dtkf .lop .show .tabs .tt5.active, .dtkf .lop .show .tabs .tt5:hover {
-  background: rgba(13,51,98,.1) url(../images/dti55.png) no-repeat top;
+
   background-position: 50% 35%;
   background-size: 28%;
 }
 .dtkf .lop .show .tabs .tt1 {
-  background: rgba(13,51,98,.1) url(../images/dti1.png) no-repeat top;
+
   background-position: 50% 35%;
   background-size: 28%;
 }
 .dtkf .lop .show .tabs .tt2{
-  background: rgba(13,51,98,.1) url(../images/dti2.png) no-repeat top;
+
   background-position: 50% 35%;
   background-size: 28%;
 }
 .dtkf .lop .show .tabs .tt3 {
-  background: rgba(13,51,98,.1) url(../images/dti3.png) no-repeat top;
+
   background-position: 50% 35%;
   background-size: 28%;
 }
 .dtkf .lop .show .tabs .tt4 {
-  background: rgba(13,51,98,.1) url(../images/dti4.png) no-repeat top;
+
   background-position: 50% 35%;
   background-size: 28%;
 }
 .dtkf .lop .show .tabs .tt5 {
-  background: rgba(13,51,98,.1) url(../images/dti5.png) no-repeat top;
+
   background-position: 50% 35%;
   background-size: 28%;
 }
 .swiper-father .swiper-container-horizontal>.swiper-pagination-bullets {
   bottom: 50px;}
+  .content .inner .swiper-button-prev {
+    left: -22px;}
+    .content .inner .swiper-button-next {
+      right: -36px;}
+      .zxdt .right1 h3 {
+        width: 136px;}
+        .yanc {
+          width: 77%;}
+          .gdyy ol li {
+            line-height: 50px;}
+            .content .inner .swiper-container2 {
+              height: 338px;
+          }
+          .dtkf .lop .show .tabs li p{
+            line-height: 50px;
+          }
+          .dtkf .lop .show .tabs .tab {
+
+            height: 52px;
+        
+        }
+        .dtkf .lop .show .z1 a {
+          margin-top: 0;
+      
+      }
 }
