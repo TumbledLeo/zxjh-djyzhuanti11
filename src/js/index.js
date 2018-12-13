@@ -151,7 +151,7 @@ var wraping = document.getElementsByClassName('wraping')[0];
 selectHeadCont[0].innerHTML = optionItem[0].innerHTML;
 var s ='';
 /*点击后出现下拉框*/
-selectHead.addEventListener('click',function(){
+selectHead.addEventListener('click',function(e){
     Option.style.display = 'block';
     wraping.style.display = 'block';
     wraping.style.opacity = '1';
@@ -222,7 +222,7 @@ var wraping1 = document.getElementsByClassName('wraping1')[0];
 selectHeadCont1[0].innerHTML = optionItem1[0].innerHTML;
 
 /*点击后出现下拉框*/
-selectHead1.addEventListener('click',function(){
+selectHead1.addEventListener('click',function(e){
     Option1.style.display = 'block';
     wraping1.style.display = 'block';
     wraping1.style.opacity = '1';
@@ -240,7 +240,7 @@ for(var i=0;i<len;i++){
         wraping1.style.display = 'none';
     },false);
 }
-$('.select1 .swiper-button-prev3,.select1 .swiper-button-next3,.select .swiper-button-prev,.select .swiper-button-next').click(function(){
+$('.select1 .swiper-button-prev3,.select1 .swiper-button-next3,.select .swiper-button-prev,.select .swiper-button-next').click(function(e){
     window.event? window.event.cancelBubble = true : e.stopPropagation(); 
 });
 // /*点击其他地方时，select会收起来*/
@@ -248,7 +248,7 @@ $('.select1 .swiper-button-prev3,.select1 .swiper-button-next3,.select .swiper-b
 //     Option1.style.display = 'none';
 //     wraping1.style.display = 'none';
 // }.false);
-$(document).click(function(){
+$(document).click(function(e){
     if(s===1){
     //alert(1);
     Option.style.display = 'none';
