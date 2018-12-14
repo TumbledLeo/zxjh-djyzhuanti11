@@ -81,7 +81,7 @@ ol, ul, li {
 }
 
 header{
-  display:none;
+  // display:none;
   width:100%;
   background:#151515;
   position: absolute;
@@ -104,7 +104,7 @@ header .cf .play{
 
 header .cf .play{
   display:block;
-  padding:34px 40px;
+  padding:35px 40px;
   color:#fff;
   text-align: center;
   font-size:16px;
@@ -116,9 +116,10 @@ header .menu{
   left:0;
   opacity:0; 
   margin-top:-24px;
-
+  z-index:99;
   width:100%;text-align: center;
   background:#e8edf4;
+  background:rgba(232,237,244,0.9);
 }
 .sp_logo{
   margin-left:128px;
@@ -276,6 +277,9 @@ header .menu{
 
 
 /* //public **********************************************************************************************************/
+.no{
+  cursor: auto;
+}
 .top_logo{
   width:128px;position: absolute;left:50%;margin-left:-64px;z-index:999;
 }
@@ -586,13 +590,13 @@ header .menu{
     text-align: justify;
     padding-bottom:10px;
     margin-top:14px;
-    height:383px;
+    height:358px;
     overflow: hidden;
     img{
     width:100%;
     }
     h4{
-      font-size: 18px;
+      font-size: 16px;
       margin:18px 10px;
       color:#000;
       overflow: hidden;
@@ -655,9 +659,10 @@ header .menu{
     padding-right:10px;
     color:#000;
     h3{
-      line-height:30px;
-      font-size: 18px;
+      line-height:22px;
+      font-size: 16px;
       width:267px;
+      margin-top:10px;
       text-overflow: -o-ellipsis-lastline;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -706,7 +711,7 @@ header .menu{
     text-align: center;
     border-right:2px solid #c6cacf;
     img{
-      border-radius: 10px;
+      border-radius: 30px;
     }
     .wx{
       position: absolute;
@@ -743,7 +748,7 @@ header .menu{
         position: absolute;
         bottom:10px;
         width:100%;
-        font-size: 18px;
+        font-size: 16px;
         color:#fff;
         text-align: left;
         text-indent:20px;
@@ -769,10 +774,10 @@ header .menu{
       width:50%;
       text-align: center;
       line-height: 67px;
-      margin-top: 64px;
+      margin-top: 44px;
       a{
         color:#000;
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   }
@@ -824,9 +829,10 @@ header .menu{
     p{
       text-align: left;
       text-indent:18px;
-      font-size: 14px;
+      font-size: 16px;
       padding-right:18px;
       line-height:34px;
+      color:#616161;
       span{
         float:right;
       }
@@ -834,7 +840,7 @@ header .menu{
   }
   .l1{
     p{
-      font-size: 18px;
+      font-size: 16px;
       text-align: center;
     }
     li{
@@ -868,7 +874,7 @@ header .menu{
       }
       p{
         text-align: right;
-        font-size: 20px;
+        font-size: 16px;
         color:#fff;
         position: absolute;
         bottom:10px;
@@ -883,8 +889,12 @@ header .menu{
       color:#000;
     }
     h4{
-      font-size: 18px;
+      font-size: 16px;
       line-height:30px;
+
+      overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     p{
       font-size: 14px;
@@ -902,11 +912,11 @@ header .menu{
     background:none;
   }
   li ol li{
-    width:45%;
+    width:46%;
     margin:0;
     margin-bottom:54px;
     p{
-      font-size:18px;
+      font-size:16px;
     }
   }
   .h1{
@@ -964,12 +974,12 @@ header .menu{
     p{
       text-align: left;
     }
-    .c1{
-      margin-top:34px;
-    }
-    .c2{
-      margin-bottom:30px;
-    }
+    // .c1{
+    //   margin-top:34px;
+    // }
+    // .c2{
+    //   margin-bottom:30px;
+    // }
     .c4{
       text-align: right;
       width:204px;
@@ -978,18 +988,28 @@ header .menu{
       text-align: right;
       width:280px;
     }
-    a{
+    // a{
+    //   color:#1248a9;
+    //   border:2px solid #1248a9;
+    //   font-size: 20px;
+    //   width:152px;
+    //   height:46px;
+    //   text-align: center;
+    //   line-height:46px;
+    //   display:block;
+    //   margin:36px auto 0;
+    // }
+       a{
       color:#1248a9;
-      border:2px solid #1248a9;
-      font-size: 20px;
+      // border:2px solid #1248a9;
+      font-size: 16px;
       width:152px;
       height:46px;
       text-align: center;
       line-height:46px;
       display:block;
-      margin:36px auto 0;
+      margin:26px auto 0;
     }
-    
   }
 }
 .hc{
@@ -1178,6 +1198,7 @@ z-index:-1;
 margin-top:4px;
 padding: 19px 0;
 opacity:0;
+top:34px;
 }
 /*下拉框样式*/
 
@@ -1259,6 +1280,7 @@ z-index:-1;
 margin-top:4px;
 padding: 19px 0;
 opacity:0;
+top:34px;
 }
 // 下拉框样式结束
 #wrapper{
@@ -1278,7 +1300,8 @@ opacity:0;
     height: 100px;
     width: 42px;
     z-index:999;
-    background:rgba(229,229,229,0.5);
+    background:#f2f2f2;
+    //background:rgba(229,229,229,0.5);
     img{
       position: absolute;
       top:44px;
@@ -1288,7 +1311,8 @@ opacity:0;
     position: absolute;
     right:110px;
     top:0px;
-    background:rgba(229,229,229,0.5);
+   // background:rgba(229,229,229,0.5);
+   background:#f2f2f2;
     width:42px;
     height:100px;
     z-index:999;
@@ -1326,6 +1350,7 @@ opacity:0;
     position: absolute;
     top:0;
     right:0;
+    z-index:999;
     p{
       font-size: 16px;
       color:#08499c;
@@ -1527,13 +1552,13 @@ background:#dbc194;
         .big{
           width:99%;
           margin-bottom:1%;
-          height: 671px;
+          height: 738px;
           overflow: hidden;
           .des{
             background:#eeeeee;
             padding:29px 24px;
             position: relative;
-            height:123px;
+            height:185px;
             .ding{
               font-size: 1.33rem;
               color:#000;
@@ -1559,10 +1584,23 @@ background:#dbc194;
           p{
             font-size: 1.5rem;
             position: absolute;
-            bottom:30px;
-
+            bottom:46px;
             span{
               padding-left:30px;
+            }
+          }
+          .price{
+            position: absolute;
+            bottom:8px;
+            font-size: 2rem;
+            color:#d34745;
+            font-weight: bold;
+            span{
+              color:#000;
+              padding-left:0px;
+              margin-left:0;
+              font-size: 14px;
+              font-weight: normal;
             }
           }
         }
@@ -1577,7 +1615,21 @@ background:#dbc194;
             background:#eeeeee;
             padding:7px 16px;
             position: relative;
-            height:77px;
+            height:110px;
+            .price{
+              position: absolute;
+              bottom:8px;
+              font-size: 16px;
+              color:#d34745;
+              font-weight: bold;
+              span{
+                color:#000;
+                padding-left:0px;
+                margin-left:0;
+                font-size: 12px;
+                font-weight: normal;
+              }
+            }
     }
     li{
       margin-right:1%;
@@ -1605,7 +1657,7 @@ background:#dbc194;
       p{
         font-size: 1.16rem;
         position: absolute;
-        bottom:10px;
+        bottom:34px;
         span{
           margin-left:10px;
         }
@@ -1628,6 +1680,9 @@ background:#dbc194;
       .des{
         background:#394a64;
         a{
+          color:#fff;
+        }
+        .price span{
           color:#fff;
         }
         
@@ -1664,7 +1719,7 @@ background:#dbc194;
   }
 .tabs{
   text-align: center;
-  padding:0 42% 40px;
+  padding:0 40% 40px;
   .tab{
     font-size: 22px;
     color:#000;
@@ -1820,7 +1875,7 @@ background:#dbc194;
         float:left;
        
         font-size: 14px;
-        color:#8a98aa;
+        color:#0d3362;
         p{
           line-height:130px;
         }
@@ -1893,7 +1948,9 @@ background:#dbc194;
     a{
       color:#fff;
     }
-    
+    .price span{
+      color:#fff;
+    }
   }
 }
 .pjhd{
@@ -2070,7 +2127,7 @@ background:#dbc194;
   li:hover{
     .des{
       
-      background:#5d6a7e;
+      background:#394a64 ;
       a{
         color:#fff;
       }
@@ -2090,7 +2147,10 @@ background:#dbc194;
   text-align: center;
   margin-top:180px;
   ul{
-    padding:0 38%;
+    width:30%;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
   }
   li{
     float: left;
@@ -2277,8 +2337,47 @@ height:640px;
 }
 .swiper-button-prev{
   left: 20px;}
+  .dtkf .lop .show .tabs{
+    width:90%;
+    padding:0 5%;
+  }
+
+  .d1 ,.d2,.d5{
+    overflow: hidden;//超出隐藏
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+  }
+  .d3{
+    overflow: hidden;//超出隐藏
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+  }
+  .d4{
+    overflow: hidden;//超出隐藏
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+  }
+  .pjhd{
+    .tj{
+      .tabContent{
+
+      }
+    }
+  }
 /**************************************************************************************************************************************/
+@media screen and (min-width:1801px) and (max-width: 1900px) {
+  .yctj .tabContents .pic .two .big {
+    height: 709px;}
+}
   @media screen and (min-width:1601px) and (max-width: 1800px) {
+    .yctj .tabContents .pic .two .big {
+      height: 709px;}
     .sp_logo{
       margin-left:128px;
     }
@@ -2287,7 +2386,7 @@ height:640px;
       margin:0 auto;
     }
     header .cf .play {
-      padding: 34px 27px;
+      padding: 35px 27px;
       font-size:16px;
   }
  .img {
@@ -2378,9 +2477,6 @@ height:640px;
                   .dtkf .lop .show .tabs li p {
                     line-height: 191px;
                 }
-.wr ul {
-      padding: 0 36%;
-    }
 .zz li .wx {
                 left: 94px;
               }
@@ -2399,6 +2495,25 @@ height:640px;
                         }
 }
   @media (max-width: 1610px) { 
+    .box .buttons {
+      bottom: -18px;}
+    .about .content .c4 {
+      text-align: right;
+      width: 180px;
+  }
+  .about .content .c6 {
+    text-align: right;
+    width: 259px;
+}
+    .dtkf .lop .show .z1 {
+      width: 24%;
+      margin: 6% 6% 0;
+  }
+  .dtkf .lop .show .z2 {
+    margin-top: 6%;
+}
+    .yssc .h2 li p {
+      font-size: 16px;}
     .content .inner .swiper-button-next {
       right: -48px;
     }  
@@ -2409,11 +2524,12 @@ height:640px;
     .yctj .solo li h6 {
       font-size: 1.3rem;}
   .dtkf .lop .show .z1 a {
-      font-size: 14px;}
+      font-size: 14px;
+    margin-top:10px;}
     .dtkf .lop .show .z1 h2 {
       font-size: 24px;
       text-align: left;
-      margin-bottom: 7px;
+      margin-bottom:24px;
   }
     .logo_left{
      width:20px;
@@ -2440,7 +2556,7 @@ header .menu{
   top:87px;
 }
  .img {
-  width:125px;
+  width:154px;
 }
 .img {
   right: 25px;
@@ -2464,11 +2580,17 @@ header .menu .wrap li{
   margin-left:128px;
 }
 .yanc li ol li {
-  margin-right: 8%;
+  margin-right: 3%;
+}
+.about li ol li p {
+  font-size: 16px;
+}
+.about .content {
+  padding:0px;
 }
 .yanc li .buy .pon{
   position: absolute;
-  top: 20px;
+  top:36px;
   font-size: 30px;
   line-height: 60px;
   border-bottom: 1px solid #fff;
@@ -2491,17 +2613,27 @@ header .menu .wrap li{
 }
 .cang .man .icon {
   width: 52%;
+  margin-top:10px;
 }
-
+.huiy .l1 li{
+  img{
+    width:70%;
+  }
+}
+.huiy .l1 p{
+  font-size: 16px;
+}
   .cang .man .icon a {
     height: 73px;
     width: 48%;}
   .cang .right h2 {
       text-indent: 40px;}
   .cang .right p {
-        text-indent: 72px;}
+        text-indent: 88px;}
+        .yshd .pic {
+          height: 320px;}
   .cang .right .dc{
-          left:144px;
+          left:164px;
           width:66px;
           height:30px;
           font-size: 14px;
@@ -2517,9 +2649,12 @@ header .menu .wrap li{
   .cang .gp .time {
     top: 10px;}
     .cang .gp .gp_a a {
-      margin-top: 6px;}
+      margin-top: 9px;}
+
       .zxdt li {
         padding-left: 16px;}
+        .gdyy ol li {
+          margin-top: 26px;}
 .banner .slidd a img {
           width: 74px;
           top: 50%;
@@ -2541,7 +2676,7 @@ header .menu .wrap li{
             font-size: 14px;
         }
         .dtkf .lop .inn .tol {
-          padding: 4rem 1.6rem 15rem;}
+          padding: 6rem 1.6rem 15rem;}
           .dtkf .lop .inn .tol a{
             bottom:100px;
           }
@@ -2560,10 +2695,7 @@ header .menu .wrap li{
     font-size: 12px;
     width: 90%;
 }
-.wr ul {
-  padding: 0 34%;
 
-}
 .zz li .wx {
   left: 86px;
 }
@@ -2621,8 +2753,40 @@ header .menu .wrap li{
     line-height: 95px;
 
 }
+.zxdt .right1 h3 {
+  width: 210px;}
+  .wr{
+    img{
+      margin-bottom:6px;
+
+    }
+    li p{
+      font-size: 14px;
+    }
+  }
+  .zxdt .right1 {
+    width: 47%;}
+    .about .content a {
+      color: #1248a9;
+      font-size: 16px;
+      width: 152px;
+      height: 46px;
+      text-align: center;
+      line-height: 46px;
+      display: block;
+      margin: 44px auto 40px;
+  }
+  .sss{
+    margin-top:50px;
+  }
   }
 @media (max-width: 1500px) { 
+  .yctj .tabContents .pic .two .big .des {
+    height: 188px;
+}
+  .wr li p {
+    font-size: 16px;
+}
   .dtkf .lop .show .tabs {
 
     bottom: 78px;
@@ -2671,6 +2835,7 @@ header .menu .wrap li{
 .zxdt .right1 h3 {
   line-height: 24px;
   font-size: 14px;
+  margin-top:10px;
 }
   .zxdt .right1 p {
     font-size: 12px;}
@@ -2683,8 +2848,7 @@ header .menu .wrap li{
       font-size: 14px;
     margin:0 8px;}
     .huiy .l1 li {
-      width: 24%;
-      margin-right: 1%;
+      width: 25%;
   
   }
 .yssc .h1 ol li h4 {
@@ -2766,15 +2930,13 @@ padding-left:50px;
         bottom:120px;
 }
       .dtkf .lop .show .tabs li p {
-        line-height: 76px;
+        line-height: 66px;
     }
 .dtkf .lop .show .tabs .tab {
       height: 94px;}
 .dtkf .lop .show {
         width: 71.4%;}
-        .wr ul {
-          padding: 0 32%;
-      }
+
       // .box li{
       //   width:390px;
       // }
@@ -2795,7 +2957,6 @@ padding-left:50px;
 
           width: 28%;
           float: right;
-          margin-top: -60px;
       
       }
       .zxdtd .a2 li .xw h2 {
@@ -2830,11 +2991,7 @@ padding-left:50px;
               height: 34px;
           
           }
-          .dtkf .lop .show .tabs li p {
 
-            line-height: 42px;
-        
-        }
         .dtkf .lop .show .tabs .tab {
 
           height: 70px;
@@ -2846,11 +3003,19 @@ padding-left:50px;
       .yssc.huiy .h1 {
         width: 50%;
     }
+    .dtkf .lop .show .z1 a.s3{
+      margin-top:10px;
+    }
+    .dtkf .lop .show .z1 {
+      width: 24%;
+      margin: 3% 6% 0;
+  }
+  .dtkf .lop .show .z2 {
+    margin-top:3%;
+}
  }
  @media (max-width: 1300px){
-.wr ul {
-  padding: 0 32%;
-}
+
 .yanc li .buy .pon {
   font-size: 20px;}
   .yanc li .buy .pon2 {
@@ -2861,10 +3026,7 @@ padding-left:50px;
 .dtkf .lop .show .tabs {
   bottom: 150px;
 }
-.dtkf .lop .show .z1 {
-  width: 25%;
-  margin: 6% 4% 0;
-}
+
 .dtkf .lop .show .z1 a.s3 {
   float: left;
   margin-right: 13%;}
@@ -3022,7 +3184,7 @@ margin-top:6px;
               height: 338px;
           }
           .dtkf .lop .show .tabs li p{
-            line-height: 60px;
+            line-height: 68px;
           }
           .dtkf .lop .show .tabs .tab {
 
@@ -3043,4 +3205,7 @@ margin-top:6px;
       .yshd .pic .time {
         bottom: 30px;  
     }
+    .content .inner .swiper-button-next ,.content .inner .swiper-button-prev{
+      top: 39%;
+  }
 }
