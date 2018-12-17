@@ -119,7 +119,7 @@ header .menu{
   z-index:99;
   width:100%;text-align: center;
   background:#e8edf4;
-  background:rgba(232,237,244,0.9);
+  background:rgba(232,237,244,0.96);
 }
 .sp_logo{
   margin-left:128px;
@@ -2373,7 +2373,7 @@ height:640px;
 /**************************************************************************************************************************************/
 @media screen and (min-width:1801px) and (max-width: 1900px) {
   .yctj .tabContents .pic .two .big {
-    height: 709px;}
+    height: auto;}
 }
   @media screen and (min-width:1601px) and (max-width: 1800px) {
     .yctj .tabContents .pic .two .big {
@@ -2495,6 +2495,11 @@ height:640px;
                         }
 }
   @media (max-width: 1610px) { 
+    .yctj .solo .des {
+      height: 86px;
+  }
+  .yctj .tabContents .pic .two .big .des {
+    padding: 5.8px 24px;}
     .box .buttons {
       bottom: -18px;}
     .about .content .c4 {
@@ -2542,12 +2547,12 @@ height:640px;
       padding-top:30px;
     }
   header .zong{
-    width:1212px;
+    width:1285px;
     margin:0 auto;
   }
   header .cf .play{
     padding:34px 29px;
-    font-size:14px;
+    font-size:16px;
   }
   /* header .logo {
     width:120px;
@@ -2559,7 +2564,7 @@ header .menu{
   width:154px;
 }
 .img {
-  right: 25px;
+  right: 0px;
   top: 33px;
 }
 header .logo a{
@@ -2793,9 +2798,12 @@ header .menu .wrap li{
 
 }
   header .zong{
-    width:971px;
+    width:1044px;
     margin:0 auto;
   }
+  header .cf .play {
+    font-size: 16px;
+}
   header .cf .play {
     padding: 34px 17px;
 }
@@ -2922,7 +2930,7 @@ padding-left:50px;
 .yctj .solo .des {
   padding: 10px 4px;}
 .yctj .tabContents .pic .two .big .des {
-      padding: 34px 24px;}
+      padding: 10.3px 24px;}
 .dtkf .lop .fly{
   height: 93%;
       }
