@@ -470,7 +470,7 @@ header .menu{
       margin-top:20px;
     }
     li:first-child{
-      width:36%;
+      width:30%;
       img{
         width:101%;
       }
@@ -2494,7 +2494,9 @@ height:640px;
                           width:200px;
                         }
 }
-  @media (max-width: 1610px) { 
+  @media (max-width: 1610px) {
+    .yshd .pic {
+      height: 320px;} 
     .yctj .solo .des {
       height: 86px;
   }
