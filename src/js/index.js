@@ -103,28 +103,33 @@ $(function(){
    $('.rr').click(function(){
     var xx=$(".content .isoll ul").offset();
     var x=xx.left;
-   var ab = -2000;
+    var ab = -1190;
+    var ss = $('.content .isoll ul').width();
+    var sq = $('.content .isoll').width();
+    var end = ss-sq;
     //alert(x);
     if(x > ab){
       var ll = Math.abs(x)+600;
       //$(".content .isoll ul").css('left',ll);
       $(".content .isoll ul").animate({left:-ll},1000);
     }else{
-      return;
+      $(".content .isoll ul").animate({left:-end},1000);
     }
    // $(".content .isoll ul").animate({left:-2437},1000);
   });
   $('.ll').click(function(){
     var yy=$(".content .isoll ul").offset();
     var y = yy.left;
-    //alert(y);
     //$(".content .isoll ul").animate({left:108},1000);
-    if(y<140 && -1700<y){
+    if(y<-1 && -2400<y){
       var ll = y+600;
-      //$(".content .isoll ul").css('left',ll);
-      $(".content .isoll ul").animate({left:ll},1000);
+        if(ll>0){
+            ll=0;
+        }
+     //$(".content .isoll ul").css('left',ll);
+     $(".content .isoll ul").animate({left:ll},1000);
     }else{
-      return;
+        $(".content .isoll ul").animate({left:0},1000);
     }
     
   });
@@ -411,5 +416,58 @@ $('.select1').mouseleave(function(){
 			
       //进入页面自动开始定时器
           //timer=setInterval(nextimg,4000);
-          
+        
+          $('.btn_video').click(function(){
+
+          });
+            // 视频
+    // let video = document.getElementById('video');
+    // $('.video_btn').on('click',function (e) {
+    //     e.preventDefault();
+    //     $('.dialog_video').fadeIn();
+    //     if(isMusicPlay){
+    //         music.pause();
+    //     }
+    // });
+
+    // $('.close_btn').on('click',function (e) {
+    //     e.preventDefault();
+    //     $('.dialog_video').fadeOut();
+    //     video.pause();
+    //     if(isMusicPlay){
+    //         music.play();
+    //     }
+    // });
+      // 视频
+      $('.btn_close').on('click', function (e) {
+        e.preventDefault();
+        $(this).parent().hide();
+        $(this).siblings('.video_inner').find('video').get(0).pause();
+        if (IsMusicPlay) {
+            music.play();
+        }
+    });
+    $('.tbch_video').on('click', function (e) {
+        e.preventDefault();
+        var attr = $(this).attr('data-video-type');
+        console.log(attr);
+        var videoEle = '.' + attr;
+        $(videoEle).show();
+
+        if (IsMusicPlay) {
+            music.pause();
+        }
+    });
+
+    $('.btn_video').on('click', function (e) {
+        e.preventDefault();
+        var attr = $(this).attr('data-video-type');
+        console.log(attr);
+        var videoEle = '.' + attr;
+        $(videoEle).show();
+
+        if (IsMusicPlay) {
+            music.pause();
+        }
+    });
 });

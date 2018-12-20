@@ -486,10 +486,10 @@
                 <div class="slidd">
                     <ul>
                         <li><img src="images/banner1_1.jpg" alt="">
-                            <a href="#"><img src="images/banner_video.png" alt=""></a>
+                            <a href="#" class="btn_video" data-video-type="video_1"><img src="images/banner_video.png" alt=""></a>
                         </li>
                         <li><img src="images/banner1_2.jpg" alt="">
-                            <a href="#"><img src="images/banner_video.png" alt=""></a>
+                            <a href="#" class="btn_video" data-video-type="video_2"><img src="images/banner_video.png" alt=""></a>
                         </li>
                     </ul>
                 </div>
@@ -502,10 +502,10 @@
                 <div class="slidd">
                     <ul>
                         <li><img src="images/banner1_1.jpg" alt="">
-                            <a href="#"><img src="images/banner_video.png" alt=""></a>
+                            <a href="#" class="btn_video" data-video-type="video_3"><img src="images/banner_video.png" alt=""></a>
                         </li>
                         <li><img src="images/banner1_2.jpg" alt="">
-                            <a href="#"><img src="images/banner_video.png" alt=""></a>
+                            <a href="#" class="btn_video" data-video-type="video_4"><img src="images/banner_video.png" alt=""></a>
                         </li>
                     </ul>
                 </div>
@@ -1402,7 +1402,36 @@
 <footer>
     <img src="images/footer.jpg" alt="">
 </footer>
-
+<!-- <div class="dialog_video dialog_wrapper">
+    <div class="inner">
+        <video id="video" src="media/1.mp4" controls>您的浏览器不支持 video 标签。</video>
+        <a href="javascript:;" class="close_btn"></a>
+    </div>
+</div> -->
+<div class="dialog dialog_wrap dialog_video video_1">
+    <a href="javascript:;" class="video_close btn_close"></a>
+    <div class="video_inner">
+        <video id="video_1" src="./media/1.mp4" controls></video>
+    </div>
+</div>
+<div class="dialog dialog_wrap dialog_video video_2">
+    <a href="javascript:;" class="video_close btn_close"></a>
+    <div class="video_inner">
+        <video id="video_2" src="media/2.mp4"  controls></video>
+    </div>
+</div>
+<div class="dialog dialog_wrap dialog_video video_3">
+    <a href="javascript:;" class="video_close btn_close"></a>
+    <div class="video_inner">
+        <video id="video_3" src="media/1.mp4"  controls></video>
+    </div>
+</div>
+<div class="dialog dialog_wrap dialog_video video_4">
+    <a href="javascript:;" class="video_close btn_close"></a>
+    <div class="video_inner">
+        <video id="video_4" src="media/2.mp4"  controls></video>
+    </div>
+</div>
 <script src="js/index.js"></script> 
 <script src="lib/swiper.min.3.js"></script>
 <script>
@@ -1428,7 +1457,7 @@
             nextButton: '.swiper-button-next3',
     });
     var mySwiper1 = new Swiper('.swiper-container1', {
-            autoplay: 3000,//可选选项，自动滑动
+            autoplay: 5000,//可选选项，自动滑动
             loop:true,
             pagination : '.swiper-pagination',
             paginationClickable :true,

@@ -7,6 +7,10 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 html{
   font-size: 12px;
 }
+body{
+  max-width: 1920px;
+  margin:0 auto;
+}
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-size: 100%;
@@ -111,6 +115,7 @@ header .cf .play{
   z-index:999;
 }
 header .menu{
+  display:none;
   position: absolute;
   top:90px;
   left:0;
@@ -607,7 +612,7 @@ header .menu{
     }
     p{
       font-size: 16px;
-      line-height: 28px;
+      line-height: 32px;
       color:#616161;
       padding:0 10px;
     }
@@ -1008,7 +1013,7 @@ header .menu{
       text-align: center;
       line-height:46px;
       display:block;
-      margin:26px auto 0;
+      margin:26px auto 58px;
     }
   }
 }
@@ -1095,7 +1100,7 @@ background:#dbc194;
   margin:0 auto;
   .goupiao{
     width:100%;
-    margin-top:10%;
+    margin-top:4%;
     img{
       width:100%;
     }
@@ -1371,7 +1376,7 @@ top:34px;
     position: relative;
     //background:rgba(229,229,229,0.5);
     ul{
-      width:224%;
+      width:3482px;
       height:100px;
       position: relative;
       //background:rgba(229,229,229,0.5);
@@ -2012,7 +2017,7 @@ background:#dbc194;
 }
 
 .zxdtd{
-  padding-bottom:100px;
+  padding-bottom:50px;
   background:url(../images/xw_bg.jpg)no-repeat;
   background-position:100% 130%;
   .a1 li{
@@ -2301,7 +2306,7 @@ height:640px;
   }
 }
 .goupiao2{
-  margin-top:10%;
+  margin-top:4%;
   li{
     width:50%;
     position: relative;
@@ -2370,6 +2375,70 @@ height:640px;
       }
     }
   }
+  .yanc li h2 {
+    padding-left: 20px;}
+    .yshd li .jia {
+      position: absolute;
+      right: 9%;
+      top: 5px;
+  }
+
+  // .dialog_wrapper{
+  //   display: none;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: rgba(0,0,0,0.9);
+  //   z-index: 99999;
+  //   .inner{
+  //     width: 70%;
+  //     margin: 150px auto;
+  //     position: relative;
+  //     video{
+  //       width: 100%;
+  //     }
+  //     .close_btn{
+  //       position: absolute;
+  //       right: 0;
+  //       top: 0;
+  //       display: block;
+  //       width: 48px;
+  //       height: 48px;
+  //       background: url("../images/close-pv.png") no-repeat left center;
+  //       &:hover{
+  //         background: url("../images/close-pv.png") no-repeat right center;
+  //       }
+  //     }
+  //   }
+  // }
+  .dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 99999; }
+    .dialog .video_inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -241px;
+      margin-left: -400px; }
+      .dialog .video_inner video {
+        width: 800px; }
+    .dialog .btn_close {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      display: block;
+      width: 32px;
+      height: 31px;
+      background: url("../images/close.png") no-repeat center center;
+      z-index: 5; }
 /**************************************************************************************************************************************/
 @media screen and (min-width:1801px) and (max-width: 1900px) {
   .yctj .tabContents .pic .two .big {
@@ -2458,7 +2527,7 @@ height:640px;
 .zxdt li {
   width: 89%;}
   .content .isoll ul {
-    width: 266%;}
+    width: 3482px;}
     .yctj .tabContents .pic .two .big {
       height: auto;}
       .dtkf .lop .inn .tol {
@@ -2488,8 +2557,7 @@ height:640px;
                     left: -36px;}
                     .content .inner .swiper-button-next {
                       right: -50px;}
-                      .content .isoll ul {
-                        width: 270%;}
+                     
                         .zxdt .right1 h3{
                           width:200px;
                         }
@@ -2620,7 +2688,7 @@ header .menu .wrap li{
 }
 .cang .man .icon {
   width: 52%;
-  margin-top:10px;
+  margin-top:-7px;
 }
 .huiy .l1 li{
   img{
@@ -2670,8 +2738,7 @@ header .menu .wrap li{
           left: 50%;
           margin-left: -37px;
       }
-.content .isoll ul {
-        width: 280%;}
+
 .yctj .tabContents .pic .two .big {
           height: auto;}
 .yctj .solo li p {
@@ -2781,7 +2848,7 @@ header .menu .wrap li{
       text-align: center;
       line-height: 46px;
       display: block;
-      margin: 44px auto 40px;
+      margin: 44px auto 20px;
   }
   .sss{
     margin-top:50px;
@@ -2852,7 +2919,7 @@ header .menu .wrap li{
     .zxdt .right1 {
       width: 38%;}
 .huiy li ol li {
-        margin-right: 2%;
+        margin-right: 0%;
     }
 .huiy .l1 p {
       font-size: 14px;
@@ -2892,17 +2959,17 @@ header .menu .wrap li{
   margin-bottom: 25px;}
   .yanc li ol .content{
     margin-top:4px;
+    padding-left:2%;
   }
   .about .content a {
     color: #1248a9;
-    border: 2px solid #1248a9;
+    //border: 2px solid #1248a9;
     font-size: 16px;
     width: 96px;
     height: 22px;
     text-align: center;
     line-height: 22px;
     display: block;
-    margin: 30px auto 0;
 }
 .about .content .c2 {
   margin-bottom: 12px;
@@ -2921,7 +2988,7 @@ header .menu .wrap li{
   }
 }
 .content .isoll ul{
-width: 334%;
+  width:3580px;
 padding-left:50px;
 }
 .yctj .tabContents .pic .two .big .des .ding {
@@ -3217,5 +3284,8 @@ margin-top:6px;
     }
     .content .inner .swiper-button-next ,.content .inner .swiper-button-prev{
       top: 39%;
+  }
+  body{
+    min-width:1280px;
   }
 }

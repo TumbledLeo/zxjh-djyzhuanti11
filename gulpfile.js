@@ -91,15 +91,16 @@ gulp.task('ban',function(){
 })
 gulp.task('yun',function(){
   gulp.src(app.srcPath +'**/*.html')
-    .pipe(gulp.dest(app.distPath))
+    .pipe(gulp.dest(app.distPath));
 })
+
 // /////////////////////////server/////////////////////////
 gulp.task('server', function () {
   // 设置服务器
   connect.server({
       root: [app.distPath],//要运行那个目录
       livereload: true,// 是否热更新
-      port: 9999 // 端口号
+      port: 7777// 端口号
   });
 
   // 监听哪些任务
@@ -108,6 +109,6 @@ gulp.task('server', function () {
   gulp.watch(app.srcPath + 'js/**/*.js', ['jsmin']);
   gulp.watch(app.srcPath + 'images/**/*', ['image']);
   gulp.watch(app.srcPath + 'css/*.scss', ['cssmin']);
-  open('http://localhost:9999');
+  open('http://localhost:7777');
 });
 gulp.task('default', ['image','jsmin','cssmin','yun','ban','server']);
