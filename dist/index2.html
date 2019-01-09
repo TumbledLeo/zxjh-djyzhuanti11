@@ -515,6 +515,8 @@
             </li>
         </ul>
         <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev swiper-button-prev7"></div><!--左箭头-->
+        <div class="swiper-button-next swiper-button-next7"></div><!--右箭头-->
     </div>       
 </div>
 <div class="inner ">
@@ -1461,7 +1463,18 @@
             loop:true,
             pagination : '.swiper-pagination',
             paginationClickable :true,
+            prevButton: '.swiper-button-prev7',
+            nextButton: '.swiper-button-next7',
+    })
+    //鼠标移出隐藏按钮，移入显示按钮
+    $('.banner').hover(function(){
+        $('.swiper-button-prev7').fadeIn();
+        $('.swiper-button-next7').fadeIn();
+    },function(){
+        $('.swiper-button-prev7').fadeOut();
+        $('.swiper-button-next7').fadeOut();
     });
+
     var mySwiper2 = new Swiper('.swiper-container2', {
             //autoplay: true,//可选选项，自动滑动
             loop:true,
@@ -1480,5 +1493,7 @@
     });
     
 </script>
+
+
 </body>
 </html>
