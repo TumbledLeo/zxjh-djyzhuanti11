@@ -75,7 +75,7 @@ $(function(){
   }
   function tabCtrl1(ele) {
    // $(ele + ' .tabContents .tabContent').hide().eq(0).show();
-    $(ele + ' .tabs .tab').eq(0).addClass('active');
+    //$(ele + ' .tabs .tab').eq(0).addClass('active');
     $(ele + ' .tabs .tab').click(function (e) {
         e.stopPropagation();
         e.preventDefault();
