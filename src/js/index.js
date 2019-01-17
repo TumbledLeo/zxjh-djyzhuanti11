@@ -121,7 +121,7 @@ $(function(){
     var yy=$(".content .isoll ul").offset();
     var y = yy.left;
     //$(".content .isoll ul").animate({left:108},1000);
-    if(y<-1 && -2400<y){
+    if(y<-1 && -2600<y){
       var ll = y+600;
         if(ll>0){
             ll=0;
