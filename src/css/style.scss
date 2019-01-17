@@ -1336,6 +1336,7 @@ top:34px;
     position: absolute;
     top:0;
     left:0;
+    z-index:9;
     p{
       font-size: 16px;
       color:#08499c;
@@ -1356,6 +1357,7 @@ top:34px;
     top:0;
     right:0;
     z-index:999;
+    cursor: auto;
     p{
       font-size: 16px;
       color:#08499c;
@@ -2540,7 +2542,7 @@ height:640px;
   width: 89%;}
   .content .isoll ul {
     // width: 3482px;
-    width: 3552px;
+    //width: 3552px;
   }
     .yctj .tabContents .pic .two .big {
       height: auto;}

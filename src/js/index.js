@@ -133,6 +133,9 @@ $(function(){
     }
     
   });
+
+
+
   $("#top").click(function() {
     $("html,body").animate({scrollTop:0}, 500);
   });
@@ -470,4 +473,25 @@ $('.select1').mouseleave(function(){
             music.pause();
         }
     });
+});
+$(function(){
+    var myDate = new Date();
+    var day = myDate.getDate(); 
+    var ss = $('.content .isoll ul').width();
+    var sq = $('.content .isoll').width();
+    var end = ss-sq;
+    if(day>8&&day<16||day==16){
+        // $(".content .isoll ul").animate({left:-900},1000);
+        $(".content .isoll ul").css('left',-900);
+    }else if(day>16&&day<24 ||day==24){
+        $(".content .isoll ul").css('left',-1800);
+    }else if(day>24){
+        $(".content .isoll ul").css('left',-end);
+    }
+    $('.content .isoll ul li').eq(day-1).addClass('active');
+
+    // var len = $('.content .isoll ul li').length;
+    // if(len==30){
+    //     $('.content .isoll ul').width()=3482;
+    // }
 });
