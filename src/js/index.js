@@ -520,7 +520,11 @@ $(function(){
     // }
     $('.zz li').hover(function(){
         $(this).find('.ewm').fadeIn();
+        $(this).find('.show_x p').css('display','none');
+        $(this).find('.show_x  .wx').css('display','none');
     },function(){
         $(this).find('.ewm').fadeOut();
+        $(this).find('.show_x p').css('display','block');
+        $(this).find('.show_x .wx').css('display','block');
     });
 });
