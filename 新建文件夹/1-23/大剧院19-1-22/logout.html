@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="lib/jquery-3.2.1.min.js"></script>
     <style>
+        .log{
+            display:none;
+        }
+        .user:hover .log{
+            display:block;
+        }
         .log:after{
             width: 0;
             height: 0; content: '';
@@ -18,6 +24,7 @@
             top:-8px;
             left:61px;
         }
+        
     </style>
 </head>
 <body>
@@ -25,13 +32,15 @@
         <ul class="cf">
             <li class="left"><a href=""><img src="images/logo11.png" alt=""></a></li>
             <li class="left"><a href=""><img src="images/logo22.png" alt=""></a></li>
-            <li class="left"><a href=""><img src="images/logo33.png" alt=""></a></li>
-            <li class="left"><a href=""><img src="images/logo44.png" alt=""></a></li>
+            <li class="left user" ><a href=""><img src="images/logo33.png" alt=""></a>
+                <div class="log" style="background:#dbc194;border-radius: 10px;width:130px;height:24px;position:relative;top:4px;right:57px;">
+                        <a href="" class="name"style="color:#000;font-size: 12px;position:absolute;left:4px;top:6px;line-height:12px;">您好：<p style="color:#000;display: inline-block;width:48px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;position:absolute;top:0;">是谁谁谁谁</p></a>
+                        <a href=""style="color:#000;font-size: 12px;position:absolute;right:4px;top:4px;">[退出]</a>
+                     </div>
+            </li>
+            <li class="left" ><a href=""><img src="images/logo44.png" alt=""></a></li>
         </ul>
-        <div class="log" style="background:#dbc194;border-radius: 10px;width:130px;height:24px;position:relative;top:4px;left:10px">
-            <a href="" class="name"style="color:#000;font-size: 12px;position:absolute;left:4px;top:6px;line-height:12px;">您好：<p style="color:#000;display: inline-block;width:48px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;position:absolute;top:0;">是谁谁谁谁</p></a>
-            <a href=""style="color:#000;font-size: 12px;position:absolute;right:4px;top:4px;">[退出]</a>
-         </div>
+        
 </div>
 
 </body>

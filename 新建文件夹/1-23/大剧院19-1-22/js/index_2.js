@@ -1,317 +1,4 @@
-$(function(){
-	var oDate;
-    var ss=new Date();
-    var year=ss.getFullYear();
-    var month=ss.getMonth()+1;
-    var day=ss.getDate();
-    var allday=0;
-    $('.mon p').text(year-1);
 
-if(month-1>0){
-    $('.mon h6').text(month-1+'月');
-}else{
-    $('.mon h6').text(12+'月');
-}
- $('.mon1 p').text(year);
- $('.mon1 h6').text(month+1+'月');
- 
-function last(){
-//此时的month是中间展示的
-var mm =  month;
-//console.log(mm);
-if(mm==1){
-    $('.mon h6').text(11+'月');
- } else if(mm==2){
-    $('.mon h6').text(12+'月');
- } else if(mm==3){
-    $('.mon h6').text(1+'月');
- } else if(mm==4){
-    $('.mon h6').text(2+'月');
- } else if(mm==5){
-    $('.mon h6').text(3+'月');
- } else if(mm==6){
-    $('.mon h6').text(4+'月');
- } else if(mm==7){
-    $('.mon h6').text(5+'月');
- } else if(mm==8){
-    $('.mon h6').text(6+'月');
- } else if(mm==9){
-    $('.mon h6').text(7+'月');
- } else if(mm==10){
-    $('.mon h6').text(8+'月');
- } else if(mm==11){
-    $('.mon h6').text(9+'月');
- }else if(mm==12){
-    $('.mon h6').text(10+'月');
- } 
-         if(month>1)
-         {
-             month=month-1;
-                   
-         }
-         else if(month===1)
-         { 
-             month = 12;
-            year=year-1;
-            
-         }      
-              
-         
-        //  Month_Day();
- $('.mon p').text(year); 
-
- $('.mon1 p').text(year);
-
-
- if(month<12){
-    $('.mon1 h6').text(month+1+'月');
- }else if(month==12){
-    $('.mon1 h6').text(1+'月');
-    $('.mon1 p').text(year+1); 
- }
- clearAll();
-  Day();
-}
-function next(){
- //此时的month是中间展示的
-var mm =  month;
-//console.log(mm);
-if(mm==1){
-    $('.mon h6').text(1+'月');
-    $('.mon1 h6').text(3+'月');
- } else if(mm==2){
-    $('.mon h6').text(2+'月');
-    $('.mon1 h6').text(4+'月');
- } else if(mm==3){
-    $('.mon h6').text(3+'月');
-    $('.mon1 h6').text(5+'月');
- } else if(mm==4){
-    $('.mon h6').text(4+'月');
-    $('.mon1 h6').text(6+'月');
- } else if(mm==5){
-    $('.mon h6').text(5+'月');
-    $('.mon1 h6').text(7+'月');
- } else if(mm==6){
-    $('.mon h6').text(6+'月');
-    $('.mon1 h6').text(8+'月');
- } else if(mm==7){
-    $('.mon h6').text(7+'月');
-    $('.mon1 h6').text(9+'月');
- } else if(mm==8){
-    $('.mon h6').text(8+'月');
-    $('.mon1 h6').text(10+'月');
- } else if(mm==9){
-    $('.mon h6').text(9+'月');
-    $('.mon1 h6').text(11+'月');
- } else if(mm==10){
-    $('.mon h6').text(10+'月');
-    $('.mon1 h6').text(12+'月');
- } else if(mm==11){
-    $('.mon h6').text(11+'月');
-    $('.mon1 h6').text(1+'月');
- }else if(mm==12){
-    $('.mon h6').text(12+'月');
-    $('.mon1 h6').text(2+'月');
- }        
-        //  if(month==11)
-        //  {
-        //     month = month-10;
-        //     year=year+1;
-        //     var yy = year;
-        //     //alert (month);
-        //  }
-         
-        //  else if(month<12)
-        //  {        
-        //      month=month+1;
-        //      //alert (month);     
-        // }
-        // else if(month==12)
-        //  {
-        //     month = 1;
-        //     year=year+1;
-        //     var yy = year;
-        //  }
-                if(month<12)
-                 {
-                     month=month+1;
-                 }
-                 else if(month===12)
-                 {
-                     month = 1;
-                     year=year+1;}
-         clearAll();
-         Day();
-       console.log(month);
-        //  Month_Day();
-
-// if(month-1>0){
-// $('.mon h6').text(month-1+'月');
-// }else if(month==1){
-//     $('.mon h6').text(12+'月');
-// }
-
-//$('.mon1 h6').text(month+1+'月');
-
-
-
-$('.mon p').text(year);
- $('.mon1 p').text(year);
-
-
-//  if($('.content .mon h6').text()=="12月"){
-//     yy=yy-1;
-//     $('.mon p').text(yy);
-//  }
-}
-function clearAll(){
-        var daterow=document.getElementById("day");
-        var child=document.getElementsByClassName("everyday");
-        var length=child.length;
-        for(var i=7;i<length;i++){
-            daterow.removeChild(child[7]);
-        }
-    }
-    // function Month_Day()
-    // {
-    //     document.getElementById("yearMonth").innerHTML=year+"年"+month+"月";
-    // }
-    //Month() 获取每个月里面有多少天
-function Month()
-    {
-        //判断月分是大月还是小月 
-        //就可以得出这个月除了2月外是30天还是31天
-        if(month!==2) {
-            if (month === 4 || month === 6 || month === 9 || month === 11)
-                allday = 30;
-            else
-                allday = 31;
-        }
-        else
-        {
-            //判断是否是闰年
-            if (year%4===0&&year%100!==0||year%400===0)
-                allday = 29;
-            else
-                allday = 28;
-        }
-    }
-function Day(){
-        //得到界面上上一个月和下一月按钮之间的时间更新显示
-        // Month_Day();
-        //得到月的天数
-        $('#wrapper ul').html('');
-        Month();
-        var firstday=new Date(year,month-1,1);
-        var xinqi=firstday.getDay();
-        
-        //var daterow=document.getElementById("day");
-// alert(xinqi)
-        //显示星期
-        
-        //显示每一天的号数
-        for(var j=1;j<=allday;j++)
-        {
-            // var dayelement=document.createElement("li");
-            //             dayelement.className="tab";
-            // var dayelement1 =document.createElement("h5");
-            //             dayelement1.className="day";
-            //             dayelement1.innerHTML=j;
-            //             dayelement.append(dayelement1);
-            //var newElement=$('<li class="tab"><p class="p">周一</p><h5 class="day">01</h5></li>');  
-                          
-                
-                //var newElement111=$('<p class="p">周'+i+'</p>');            
-               // $(newElement).before( $("newElement111") );
-               var weekDay = ["日", "一", "二", "三", "四", "五", "六"]; 
-               var monday=new Date(year,month-1,j); 
-                var myDate = new Date(Date.parse(monday));  
-               // console.log(weekDay[myDate.getDay()]); 
-                if(j<10){
-                    j='0'+j;
-                }
-            var newElement=$('<li class="tab"><p class="p">周'+weekDay[myDate.getDay()]+'</p><h5 class="day">'+j+'</h5></li>');  
-            
-            //if(day===j)
-               // dayelement.style.color="red";
-                $('#wrapper ul').append(newElement);
-        }
-        
-}
-        Day();
-        
-        $('.mon').click(function(){
-            $(".content .isoll ul").css('left',0);
-            last();   
-            $('.content .isoll li').click(function(){
-                var years = year.toString();
-            var months_od = '0'+month.toString();
-			var months = months_od.substring(months_od.length-2);
-           //var weeks= $(this).find('p').text();
-           var days= $(this).find('h5').text();
-           oDate = years+'-'+months+'-'+days;
-		   vDate(oDate);
-           console.log(oDate);
-           $('.content .isoll li').removeClass('active');
-               $(this).addClass('active');
-            });
-        });
-        $('.mon1').click(function(){
-            
-            next();
-            $(".content .isoll ul").css('left',0);
-            $('.content .isoll li').click(function(){
-                var years = year.toString();
-            var months_od = '0'+month.toString();
-			var months = months_od.substring(months_od.length-2);
-           //var weeks= $(this).find('p').text();
-           var days= $(this).find('h5').text();
-		   oDate = years+'-'+months+'-'+days;
-		   vDate(oDate);
-           console.log(oDate);
-           $('.content .isoll li').removeClass('active');
-               $(this).addClass('active');
-            });
-        });
-        
-        var ss1=new Date();
-        var year1=ss1.getFullYear();
-        var month1=ss1.getMonth()+1;
-        var day1=ss1.getDate();
-       
-        var ss = $('.content .isoll ul').width();
-        var sq = $('.content .isoll').width();
-        var end = ss-sq;
-      //  alert(month==month1&&day1==day&&year1==year);
-        if(month==month1&&day1==day&&year1==year){
-            if(day1>8&&day1<16||day1==16){
-                // $(".content .isoll ul").animate({left:-900},1000);
-                $(".content .isoll ul").css('left',-900);
-            }else if(day1>16&&day1<24 ||day1==24){
-                $(".content .isoll ul").css('left',-1800);
-            }else if(day1>24){
-                $(".content .isoll ul").css('left',-end);
-            }
-            $('.content .isoll ul li').eq(day1-1).addClass('cur');
-            $('.content .isoll ul li').eq(day1-1).find('p').text('今天');
-        }
-
-        $('.content .isoll li').click(function(){
-            var years = year.toString();
-            var months_od = '0'+month.toString();
-			var months = months_od.substring(months_od.length-2);
-          // var weeks= $(this).find('p').text();
-           var days= $(this).find('h5').text();
-		   oDate = years+'-'+months+'-'+days;
-		   //------------------------------
-		   vDate(oDate);		   
-		   //------------------------------		   
-           console.log(oDate);
-           $('.content .isoll li').removeClass('active');
-            $(this).addClass('active');
-        });  
-
-});
 //加载日历
 function vDate(dDays){
 	setTimeout(function(){
@@ -397,23 +84,7 @@ $(function(){
       $('.no').removeClass('active');
     });
   });
-  // $('.img0').hover(function(){
-  //   $(this).find('img').attr("src",'images/cg11.jpg');
-  //   $(this).find('p').animate({fontSize:"26px",top:"80px",left:"150px"},200);
-  // },function(){
-  //   $(this).find('img').attr("src",'images/cg1.jpg');
-  //   $(this).find('p').animate({fontSize:"20px",top:"85px",left:"160px"},200);
-  // });
-  // $('.img1').hover(function(){
-  //   $(this).find('img').attr("src",'images/cg22.jpg');
-  // },function(){
-  //   $(this).find('img').attr("src",'images/cg2.jpg');
-  // });
-  // $('.img2').hover(function(){
-  //   $(this).find('img').attr("src",'images/cg33.jpg');
-  // },function(){
-  //   $(this).find('img').attr("src",'images/cg3.jpg');
-  // });
+
 
 
   $('.logo_left a').click(function(){
@@ -566,126 +237,7 @@ $('.content .isoll li').click(function(){
   }
   });
 
-// select
 
-//int
-// var selectHead = document.getElementsByClassName('select-head')[0];
-// var selectHeadCont = document.getElementsByClassName('select-head-cont');
-// var Option = document.getElementsByClassName('option')[0];
-// var optionItem = document.getElementsByClassName('option-item');
-// var wraping = document.getElementsByClassName('wraping')[0];
-// /*默认是第一个选项*/
-// selectHeadCont[0].innerHTML = optionItem[0].innerHTML;
-// var s ='';
-// /*点击后出现下拉框*/
-// selectHead.addEventListener('click',function(e){
-//     Option.style.display = 'block';
-//     wraping.style.display = 'block';
-//     wraping.style.opacity = '1';
-//     wraping.style.zIndex = '999';
-//     $(".option").addClass('show');
-//     s=1;
-//    // e.stopPropagation(); 
-//     window.event? window.event.cancelBubble = true : e.stopPropagation();  
-// },false);
-// /*点击选项后出收起下拉框*/
-// var len = optionItem.length;
-// for(var i=0;i<len;i++){
-//     optionItem[i].index = i;
-//     optionItem[i].addEventListener('click',function(){
-//         selectHeadCont[0].innerHTML = optionItem[this.index].innerHTML;
-//         Option.style.display = 'none';
-//         wraping.style.display = 'none';
-//         $(".option").removeClass('show');
-//     },false);
-// }
-
-
-
-// $(document).click(function(event){
-//     var ss =  $(".wraping").attr('style');
-//     var ll = ss.split(';')[3];
-//     var m = ll.split(':')[1];
-
-//    // alert(m.trim()=='block');
-//     if(m.trim()=='block'){
-//       //  alert(1);
-//      $(".wraping").css("display","none");
-//     }else{
-//         return;
-//     }
-//     e.stopPropagation();
-//  }); 
-/*点击其他地方时，select会收起来*/
-// $('document:not(.select-head)').click(function(){
-
-//     $(".option").removeClass('show');
-//     $('.option').css("display","none");
-//     $('.wraping').css("display","none");
-//     // Option.style.display = 'none';
-//     // wraping.style.display = 'none';
-// });
-
-// $("*").click(function (event) {
-//   if (!$(this).hasClass("select-head")){
-//     Option.style.display = 'none';
-//     wraping.style.display = 'none';
-//   }
-//   //event.stopPropagation();   
-// });
-// $('.select').click(function(){
-//     $('.set').css("display","block");
-//     $('.set,.rili').click(function(){
-//         $('.set').css("dosplay","none");
-//         $('.wraping').css("display","none");
-//     });
-// });
-// var selectHead1 = document.getElementsByClassName('select-head1')[0];
-// var selectHeadCont1 = document.getElementsByClassName('select-head-cont1');
-// var Option1 = document.getElementsByClassName('option1')[0];
-// var optionItem1 = document.getElementsByClassName('option-item1');
-// var wraping1 = document.getElementsByClassName('wraping1')[0];
-// /*默认是第一个选项*/
-// selectHeadCont1[0].innerHTML = optionItem1[0].innerHTML;
-
-// /*点击后出现下拉框*/
-// selectHead1.addEventListener('click',function(e){
-//     Option1.style.display = 'block';
-//     wraping1.style.display = 'block';
-//     wraping1.style.opacity = '1';
-//     wraping1.style.zIndex = '999';
-//     s=1;
-//     window.event? window.event.cancelBubble = true : e.stopPropagation(); 
-// },false);
-// /*点击选项后出现在下拉框*/
-// var len = optionItem1.length;
-// for(var i=0;i<len;i++){
-//     optionItem1[i].index = i;
-//     optionItem1[i].addEventListener('click',function(){
-//         selectHeadCont1[0].innerHTML = optionItem1[this.index].innerHTML;
-//         Option1.style.display = 'none';
-//         wraping1.style.display = 'none';
-//     },false);
-// }
-// $('.select1 .swiper-button-prev3,.select1 .swiper-button-next3,.select .swiper-button-prev,.select .swiper-button-next').click(function(e){
-//     window.event? window.event.cancelBubble = true : e.stopPropagation(); 
-// });
-// /*点击其他地方时，select会收起来*/
-// document.body.addEventListener('click',function(){
-//     Option1.style.display = 'none';
-//     wraping1.style.display = 'none';
-// }.false);
-// $(document).click(function(e){
-//     if(s===1){
-//     //alert(1);
-//     Option.style.display = 'none';
-//      wraping.style.display = 'none';
-//      Option1.style.display = 'none';
-//      wraping1.style.display = 'none';
-//     }
-//     //e.stopPropagation(); 
-//     window.event? window.event.cancelBubble = true : e.stopPropagation(); 
-// });
 $('.wraping').mouseleave(function(){
     $(this).css("display","none");      
 });
@@ -762,50 +314,7 @@ $('.select1').mouseleave(function(){
 				show();
 			}
 			
-			//通过底下按钮点击切换
-			//  $a.each(function(){
-			// 	$(this).click(function(){
-			// 		var myindex=$(this).index();
-			// 		var b=myindex-index;
-			// 		if(b==0){
-			// 			return;
-			// 		}
-			// 		else if(b>0) {
-			// 			/*
-			// 			 * splice(0,b)的意思是从索引0开始,取出数量为b的数组
-			// 			 * 因为每次点击之后数组都被改变了,所以当前显示的这个照片的索引才是0
-			// 			 * 所以取出从索引0到b的数组,就是从原本的这个照片到需要点击的照片的数组
-			// 			 * 这时候原本的数组也将这部分数组进行移除了
-			// 			 * 再把移除的数组添加的原本的数组的后面
-			// 			 */
-			// 			var newarr=cArr.splice(0,b);
-			// 			cArr=$.merge(cArr,newarr);
-			// 			$("li").each(function(i,e){
-			// 			$(e).removeClass().addClass(cArr[i]);
-			// 			})
-			// 			index=myindex;
-			// 			show();
-			// 		}
-			// 		else if(b<0){
-			// 			/*
-			// 			 * 因为b<0,所以取数组的时候是倒序来取的,也就是说我们可以先把数组的顺序颠倒一下
-			// 			 * 而b现在是负值,所以取出索引0到-b即为需要取出的数组
-			// 			 * 也就是从原本的照片到需要点击的照片的数组
-			// 			 * 然后将原本的数组跟取出的数组进行拼接
-			// 			 * 再次倒序,使原本的倒序变为正序
-			// 			 */
-			// 			cArr.reverse();
-			// 			var oldarr=cArr.splice(0,-b)
-			// 			cArr=$.merge(cArr,oldarr);
-			// 			cArr.reverse();
-			// 			$("li").each(function(i,e){
-			// 			$(e).removeClass().addClass(cArr[i]);
-			// 			})
-			// 			index=myindex;
-			// 			show();
-			// 		}
-			// 	})
-			// })
+			
 			
 			//改变底下按钮的背景色
 			function show(){
@@ -973,6 +482,29 @@ $('.pjhd .tabContents li .des h6').each(function(){
         }
     }else{
         if(show_t>44){
+            $(this).addClass('shenglss');
+        }
+    }
+    
+    //alert(show_t);
+});
+$('.zxdt .right1 h3').each(function(){
+    var show_t = strlen($(this).text());
+    if($('html').width()>1600){
+        
+        if(show_t>56){
+            $(this).addClass('shenglss');
+        }
+    }else if($('html').width()<=1600&&$('html').width()>1400) {
+        if(show_t>30){
+            $(this).addClass('shenglss');
+        }
+    }else if($('html').width()>1200) {
+        if(show_t>30){
+            $(this).addClass('shenglss');
+        }
+    }else{
+        if(show_t>30){
             $(this).addClass('shenglss');
         }
     }

@@ -17,6 +17,13 @@
             top:-8px;
             left:52px;
         }
+        .log{
+            display:none;
+        }
+        .user:hover .log{
+            display:block; 
+        }
+        
     </style>
 </head>
 <body>
@@ -24,7 +31,13 @@
         <ul class="cf">
             <li class="left"><a href=""><img src="images/logo11.png" alt=""></a></li>
             <li class="left"><a href=""><img src="images/logo22.png" alt=""></a></li>
-            <li class="left" style="width:22%"><a href=""><img src="images/man.png" alt=""></a></li>
+            <li class="left user" style="width:22%"><a href=""><img src="images/man.png" alt=""></a>
+                <div class="log" style="background:#dbc194;border-radius: 10px;width:114px;height:24px;position:relative;top:4px;right:47px;">
+                        <a href="" style="color:#000;font-size: 12px;position:absolute;left:20px;top:4px;">登录</a>
+                        <p style="position:absolute;left:55px;top:3px;">|</p>
+                        <a href=""style="color:#000;font-size: 12px;position:absolute;right:20px;top:4px;">注册</a>
+                     </div>
+            </li>
             <!-- <li class="left"><a href=""><img src="images/logo44.png" alt=""></a></li> -->
         </ul>
         <!-- <form action="">
@@ -33,11 +46,16 @@
             </div>
             
         </form> -->
-        <div class="log" style="background:#dbc194;border-radius: 10px;width:114px;height:24px;position:relative;top:4px;left:20px">
-           <a href="" style="color:#000;font-size: 12px;position:absolute;left:20px;top:4px;">登录</a>
-           <p style="position:absolute;left:55px;top:3px;">|</p>
-           <a href=""style="color:#000;font-size: 12px;position:absolute;right:20px;top:4px;">注册</a>
-        </div>
+        
 </div>
+<script>
+// $(function(){
+//     $('.user').hover(function(){
+//         $('.log').css('display','block');
+//     },function(){
+//         $('.log').css('display','none');
+//     });
+// });
+</script>
 </body>
 </html>
