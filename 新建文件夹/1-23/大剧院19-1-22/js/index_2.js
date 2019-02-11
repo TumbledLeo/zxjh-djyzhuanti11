@@ -1,6 +1,7 @@
 
 //加载日历
 function vDate(dDays){
+  var plink = $('#plink').attr('value');
 	setTimeout(function(){
 				  $.ajax({
 					    url: "/was5/web/search?channelid=212895&ycid=73&hdid=209&day="+dDays,
@@ -29,9 +30,11 @@ function vDate(dDays){
 							{  
 							   var linkyc=plink+"product-"+list1[i].PRODUCTID+".html";
 							  var ycTitle_ = list1[i].PRODUCTNAMESHORT;
+                var yCTitie_ = list1[i].PRODUCTNAMESHORT;
 							   if(ycTitle_.length>19)ycTitle_ = ycTitle_.substring(0,19)+"...";
 							   
-							  dryc+='<li class="swiper-slide"><a class="ycimg" href="'+linkyc+'"><img class="bg" src="'+list1[i].PRODUCTIMGX+'"  /></a><div class="dd"><h5>'+ycTitle_+'</h5><p>'+list1[i].VNAME+'</p><p>'+list1[i].PLAYTIMEHour+':'+list1[i].PLAYTIMEMin+'</p><a href="'+linkyc+'" class="play">立即订票</a></div></li>';
+                              dryc+='<li class="swiper-slide"><a class="ycimg" target="_blank" href="'+linkyc+'"><img class="bg" src="'+list1[i].PRODUCTIMGX+'"  /></a><div class="dd"><h5 title="'+yCTitie_+'">'+ycTitle_+'</h5><p>'+list1[i].VNAME+'</p><p>'+list1[i].PLAYTIMEHour+':'+list1[i].PLAYTIMEMin+'</p><a target="_blank" href="'+linkyc+'" class="play">立即订票</a></div></li>';
+                             
 							}
 							if(list1.length<5){
 							$('.syc').html(dryc);
@@ -69,6 +72,358 @@ slidesPerView : 4,
 
 // });     
 $(function(){
+    var oDate;
+    var ss=new Date();
+    var year=ss.getFullYear();
+    var month=ss.getMonth()+1;
+    var day=ss.getDate();
+    var iMonth ='0'+month;
+    var iMonth_now = iMonth.substring(iMonth.length-2);
+    var iDate = year+'-'+iMonth_now+'-'+day;
+    vDate(iDate);
+    var allday=0;
+    $('.mon p').text(year-1);
+    $('.showtime li').eq(0).text(year);
+    $('.showtime li').eq(2).text(iMonth_now);
+if(month-1>0){
+    $('.mon h6').text(month-1+'月');
+}else{
+    $('.mon h6').text(12+'月');
+}
+ $('.mon1 p').text(year);
+ $('.mon1 h6').text(month+1+'月');
+function last(){
+//此时的month是中间展示的
+var mm =  month;
+//console.log(mm);
+if(mm==1){
+    $('.mon h6').text(11+'月');
+ } else if(mm==2){
+    $('.mon h6').text(12+'月');
+ } else if(mm==3){
+    $('.mon h6').text(1+'月');
+ } else if(mm==4){
+    $('.mon h6').text(2+'月');
+ } else if(mm==5){
+    $('.mon h6').text(3+'月');
+ } else if(mm==6){
+    $('.mon h6').text(4+'月');
+ } else if(mm==7){
+    $('.mon h6').text(5+'月');
+ } else if(mm==8){
+    $('.mon h6').text(6+'月');
+ } else if(mm==9){
+    $('.mon h6').text(7+'月');
+ } else if(mm==10){
+    $('.mon h6').text(8+'月');
+ } else if(mm==11){
+    $('.mon h6').text(9+'月');
+ }else if(mm==12){
+    $('.mon h6').text(10+'月');
+ } 
+         if(month>1)
+         {
+             month=month-1;
+                   
+         }
+         else if(month===1)
+         { 
+             month = 12;
+           year=year-1;
+            
+         } 
+     
+        if(mm===2){
+            var yy = year;
+            yy=yy-1;
+          //  alert(year);
+            $('.mon p').text(yy);    
+        }
+
+console.log(mm);
+// $('.showtime li').eq(0).text(year+'年');
+// $('.showtime li').eq(1).text(month+"月");
+$('.showtime li').eq(0).text(year);
+$('.showtime li').eq(0).text(year);
+if(month<10){
+    $('.showtime li').eq(2).text('0'+month);
+}else{
+    $('.showtime li').eq(2).text(month);
+}
+ // $('.mon p').text(year); 
+ $('.mon1 p').text(year);
+
+ if(month<12){
+    $('.mon1 h6').text(month+1+'月');
+ }else if(month==12){
+    $('.mon1 h6').text(1+'月');
+    $('.mon1 p').text(year+1); 
+ }
+ clearAll();
+  Day();
+}
+function next(){
+ //此时的month是中间展示的
+var mm =  month;
+//console.log(mm);
+if(mm==1){
+    $('.mon h6').text(1+'月');
+    $('.mon1 h6').text(3+'月');
+ } else if(mm==2){
+    $('.mon h6').text(2+'月');
+    $('.mon1 h6').text(4+'月');
+ } else if(mm==3){
+    $('.mon h6').text(3+'月');
+    $('.mon1 h6').text(5+'月');
+ } else if(mm==4){
+    $('.mon h6').text(4+'月');
+    $('.mon1 h6').text(6+'月');
+ } else if(mm==5){
+    $('.mon h6').text(5+'月');
+    $('.mon1 h6').text(7+'月');
+ } else if(mm==6){
+    $('.mon h6').text(6+'月');
+    $('.mon1 h6').text(8+'月');
+ } else if(mm==7){
+    $('.mon h6').text(7+'月');
+    $('.mon1 h6').text(9+'月');
+ } else if(mm==8){
+    $('.mon h6').text(8+'月');
+    $('.mon1 h6').text(10+'月');
+ } else if(mm==9){
+    $('.mon h6').text(9+'月');
+    $('.mon1 h6').text(11+'月');
+ } else if(mm==10){
+    $('.mon h6').text(10+'月');
+    $('.mon1 h6').text(12+'月');
+ } else if(mm==11){
+    $('.mon h6').text(11+'月');
+    $('.mon1 h6').text(1+'月');
+ }else if(mm==12){
+    $('.mon h6').text(12+'月');
+    $('.mon1 h6').text(2+'月');
+ }        
+                if(month<12)
+                 {
+                     month=month+1;
+                 }
+                 else if(month===12)
+                 {
+                     month = 1;
+                   
+
+                }
+                if(mm===11){
+                    year=year+1;
+                    $('.mon1 p').text(year);
+                }
+                if(mm===1){
+                    $('.mon p').text(year);
+                }
+                // if(mm===11){
+                //     var yy = year;
+                //     yy=yy+1;
+                //     $('.mon1 p').text(yy);
+                // }
+                // if(mm===1){
+                //     $('.mon p').text(year);
+                // }
+         clearAll();
+         Day();
+        //  $('.showtime li').eq(0).text(year+'年');
+        //  $('.showtime li').eq(1).text(month+"月");
+        $('.showtime li').eq(0).text(year);
+        if(month<10){
+            $('.showtime li').eq(2).text('0'+month);
+        }else{
+            $('.showtime li').eq(2).text(month);
+        }
+       
+    //    console.log(month);
+    //    console.log(year);
+       
+       
+}
+function clearAll(){
+        var daterow=document.getElementById("day");
+        var child=document.getElementsByClassName("everyday");
+        var length=child.length;
+        for(var i=7;i<length;i++){
+            daterow.removeChild(child[7]);
+        }
+    }
+
+    //Month() 获取每个月里面有多少天
+function Month()
+    {
+        //判断月分是大月还是小月 
+        //就可以得出这个月除了2月外是30天还是31天
+        if(month!==2) {
+            if (month === 4 || month === 6 || month === 9 || month === 11)
+                allday = 30;
+            else
+                allday = 31;
+        }
+        else
+        {
+            //判断是否是闰年
+            if (year%4===0&&year%100!==0||year%400===0)
+                allday = 29;
+            else
+                allday = 28;
+        }
+    }
+function Day(){
+        //得到界面上上一个月和下一月按钮之间的时间更新显示
+    
+        //得到月的天数
+        $('#wrapper ul').html('');
+        Month();
+        var firstday=new Date(year,month-1,1);
+        var xinqi=firstday.getDay();
+        
+        //var daterow=document.getElementById("day");
+// alert(xinqi)
+        //显示星期
+        
+        //显示每一天的号数
+        for(var j=1;j<=allday;j++)
+        {
+               var weekDay = ["日", "一", "二", "三", "四", "五", "六"]; 
+               var monday=new Date(year,month-1,j); 
+                var myDate = new Date(Date.parse(monday));  
+               // console.log(weekDay[myDate.getDay()]); 
+                if(j<10){
+                    j='0'+j;
+                }
+            //var newElement=$('<li class="tab"><p class="p">周'+weekDay[myDate.getDay()]+'</p><h5 class="day">'+j+'</h5></li>');  
+            if(myDate.getDay()==6||myDate.getDay()==0){
+                var newElement=$('<li class="tab scq"><p class="p">周'+weekDay[myDate.getDay()]+'</p><h5 class="day">'+j+'</h5></li>'); 
+            }else{
+                var newElement=$('<li class="tab"><p class="p">周'+weekDay[myDate.getDay()]+'</p><h5 class="day">'+j+'</h5></li>'); 
+            }
+            //if(day===j)
+               // dayelement.style.color="red";
+                $('#wrapper ul').append(newElement);              
+        }
+}
+        Day();
+        
+        $('.mon').click(function(){
+            $(".content .isoll ul").css('left',0);
+            last();   
+            $('.content .isoll li').click(function(){
+                var years = year.toString();
+            var months_od = '0'+month.toString();
+      var months = months_od.substring(months_od.length-2);
+           //var weeks= $(this).find('p').text();
+           var days= $(this).find('h5').text();
+           oDate = years+'-'+months+'-'+days;
+       vDate(oDate);
+           console.log(oDate);
+        //    $('.content .isoll li').removeClass('active');
+        //        $(this).addClass('active');
+            });
+            if(month==month1&&day1==day&&year1==year){
+                if(day1>8&&day1<16||day1==16){
+                    // $(".content .isoll ul").animate({left:-900},1000);
+                    $(".content .isoll ul").css('left',-900);
+                }else if(day1>16&&day1<24 ||day1==24){
+                    $(".content .isoll ul").css('left',-1800);
+                }else if(day1>24){
+                    $(".content .isoll ul").css('left',-end);
+                }
+                $('.content .isoll ul li').eq(day1-1).addClass('cur');
+                $('.content .isoll ul li').eq(day1-1).find('p').text('今天');
+              
+            }
+            $('.content .isoll li').click(function(){
+                if($(this).hasClass('active')){
+                    $(this).removeClass('active');
+                }else{
+                    $('.content .isoll li').removeClass('active');
+                    $(this).addClass('active');
+                }
+             });
+        });
+        $('.mon1').click(function(){
+            
+            next();
+            $(".content .isoll ul").css('left',0);
+            $('.content .isoll li').click(function(){
+                var years = year.toString();
+            var months_od = '0'+month.toString();
+      var months = months_od.substring(months_od.length-2);
+           //var weeks= $(this).find('p').text();
+           var days= $(this).find('h5').text();
+       oDate = years+'-'+months+'-'+days;
+       vDate(oDate);
+           console.log(oDate);
+        //    $('.content .isoll li').removeClass('active');
+        //        $(this).addClass('active');
+            });
+            if(month==month1&&day1==day&&year1==year){
+                if(day1>8&&day1<16||day1==16){
+                    // $(".content .isoll ul").animate({left:-900},1000);
+                    $(".content .isoll ul").css('left',-900);
+                }else if(day1>16&&day1<24 ||day1==24){
+                    $(".content .isoll ul").css('left',-1800);
+                }else if(day1>24){
+                    $(".content .isoll ul").css('left',-end);
+                }
+                $('.content .isoll ul li').eq(day1-1).addClass('cur');
+                $('.content .isoll ul li').eq(day1-1).find('p').text('今天');
+                
+            }
+            $('.content .isoll li').click(function(){
+                if($(this).hasClass('active')){
+                    $(this).removeClass('active');
+                }else{
+                    $('.content .isoll li').removeClass('active');
+                    $(this).addClass('active');
+                }
+             });
+        });
+        
+        var ss1=new Date();
+        var year1=ss1.getFullYear();
+        var month1=ss1.getMonth()+1;
+        var day1=ss1.getDate();
+       
+        var ss = $('.content .isoll ul').width();
+        var sq = $('.content .isoll').width();
+        var end = ss-sq;
+      //  alert(month==month1&&day1==day&&year1==year);
+        if(month==month1&&day1==day&&year1==year){
+            if(day1>8&&day1<16||day1==16){
+                // $(".content .isoll ul").animate({left:-900},1000);
+                $(".content .isoll ul").css('left',-900);
+            }else if(day1>16&&day1<24 ||day1==24){
+                $(".content .isoll ul").css('left',-1800);
+            }else if(day1>24){
+                $(".content .isoll ul").css('left',-end);
+            }
+            $('.content .isoll ul li').eq(day1-1).addClass('cur');
+            $('.content .isoll ul li').eq(day1-1).find('p').text('今天');
+            $('.content .isoll ul li').eq(day1-1).addClass('haveshow');
+        }
+
+        $('.content .isoll li').click(function(){
+            var years = year.toString();
+            var months_od = '0'+month.toString();
+      var months = months_od.substring(months_od.length-2);
+          // var weeks= $(this).find('p').text();
+           var days= $(this).find('h5').text();
+       oDate = years+'-'+months+'-'+days;
+       //------------------------------
+       vDate(oDate);       
+       //------------------------------      
+           console.log(oDate);
+        //    $('.content .isoll li').removeClass('active');
+        //     $(this).addClass('active');
+
+            
+        });  
   $('.play').hover(function(){
     // $(this).addClass('active').parent().find('.menu').stop(true).fadeIn(100).animate({marginTop:"0",opacity:"1",zIndex:"99"});
     $(this).addClass('active').parent().find('.menu').stop(true).fadeIn(500)
@@ -159,30 +514,34 @@ $(function(){
             });
             $(ele + ' .tabContents .tabContent').animate({height:"0"},100);
             $('.content .isoll ul li').eq(day-1).removeClass('cur');
-            if($(ele + ' .tabContents .tabContent').eq(index).hasClass('cf')){
-                $(ele + ' .tabContents .tabContent').eq(index).animate({height:"300px"},100);
-            }else{
-                $(ele + ' .tabContents .tabContent').eq(index).animate({height:"0"},100);
-            }
+            // if($(ele + ' .tabContents .tabContent').eq(index).hasClass('active')){
+            //     $(ele + ' .tabContents .tabContent').eq(index).animate({height:"300px"},100);
+
+            
+            // }else{
+            //     $(ele + ' .tabContents .tabContent').eq(index).animate({height:"0"},100);
+            // }
     } 
     });
     $(ele + ' .tabs .tab').eq(day-1).click(function(){
         if($(this).hasClass('active')){
-            $(ele + ' .tabContents .tabContent').animate({height:"0"},100);
+         //   $(ele + ' .tabContents .tabContent').animate({height:"0"},100);
+            $(ele + ' .tabContents .tabContent').eq(day-1).animate({height:"300px"},100).siblings().animate({height:"0"},100);
+           // $('.syc').animate({height:"300px"},100);
         }else{
-            $(ele + ' .tabContents .tabContent').eq(day-1).animate({height:"300px"},100);
             $('.content .isoll ul li').eq(day-1).removeClass('cur');
+            //$('.syc').animate({height:"0"},100);
         }
-        if($(this).hasClass('cur')){
-            $(ele + ' .tabContents .tabContent').eq(day-1).animate({height:"300px"},100);
-        }
+        // if($(this).hasClass('cur')){
+        //     $(ele + ' .tabContents .tabContent').eq(day-1).animate({height:"300px"},100);
+        // }
     });
   }
    tabCtrl1('.wrap');
-$('.content .isoll li').click(function(){
-    $('.content .isoll li').removeClass('active');
-     $(this).addClass('active');
- });
+// $('.content .isoll li').click(function(){
+//     $('.content .isoll li').removeClass('active');
+//      $(this).addClass('active');
+//  });
    tabCtrl('.yctj');
    tabCtrl('.show');
    tabCtrl('.pjhd');
@@ -314,7 +673,11 @@ $('.select1').mouseleave(function(){
 				show();
 			}
 			
-			
+			// $('.buttons a').click(
+            //     function(){
+            //         $(this).addClass("blue").parent().siblings().children().removeClass("blue");
+            //     }
+            // );
 			
 			//改变底下按钮的背景色
 			function show(){

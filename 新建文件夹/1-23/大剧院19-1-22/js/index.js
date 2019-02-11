@@ -264,8 +264,7 @@ function Day(){
         var ss1=new Date();
         var year1=ss1.getFullYear();
         var month1=ss1.getMonth()+1;
-        var day1=ss1.getDate();
-       
+        var day1=ss1.getDate();  
         var ss = $('.content .isoll ul').width();
         var sq = $('.content .isoll').width();
         var end = ss-sq;
@@ -281,6 +280,7 @@ function Day(){
             }
             $('.content .isoll ul li').eq(day1-1).addClass('cur');
             $('.content .isoll ul li').eq(day1-1).find('p').text('今天');
+           
         }
 
         $('.content .isoll li').click(function(){
@@ -380,7 +380,7 @@ $(function(){
     $(ele + ' .tabContents .tabContent').animate({height:"0"},100);
 
     $('.content .isoll ul li').eq(day-1).addClass('cur');
-
+    
 
     //alert(getMonthDays(year1,mon));
     $(ele + ' .tabs .tab').click(function (e) {
